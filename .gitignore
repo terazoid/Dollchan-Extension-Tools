@@ -96,3 +96,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+_site
+.sass-cache
+.jekyll-metadata

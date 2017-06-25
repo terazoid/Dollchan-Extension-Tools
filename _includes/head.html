@@ -1,0 +1,16 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ "/css/bootstrap.min.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/board.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/futaba.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/css/index.css" | relative_url }}">
+  <script type="text/javascript" src="{{ "/js/jquery-3.2.1.min.js" | relative_url }}"></script>
+  <script type="text/javascript" src="{{ "/js/tether.min.js" | relative_url }}"></script>
+  <script type="text/javascript" src="{{ "/js/bootstrap.min.js" | relative_url }}"></script>
+  <script type="text/javascript" src="{{ "/js/index.js" | relative_url }}"></script>
+</head>

@@ -1,0 +1,61 @@
+.form-check-label * {
+  vertical-align: middle;
+}
+
+.form-check-input {
+  margin-top: .5rem;
+}
+
+.form-sub-1 {
+  margin-left: 2rem;
+}
+
+#sidebar {
+  position: fixed;
+  top: 40px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+#topnav {
+  position: fixed;
+  border-radius: 0;
+}
+
+main {
+  margin-top: 38px;
+}
+
+.old-panel-expimg {
+  background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: gray;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.nav.flex-column ul {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0;
+}
+
+#hide-panel-goback svg.de-panel-svg {
+  transform: rotate(-180deg);
+}
+#hide-panel-gonext svg.de-panel-svg {
+  transform: rotate(0deg);
+}
+#hide-panel-goup svg.de-panel-svg {
+  transform: rotate(-90deg);
+}
+#hide-panel-godown svg.de-panel-svg {
+  transform: rotate(90deg);
+}

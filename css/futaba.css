@@ -1,0 +1,165 @@
+.board-preview.board-futaba {
+  background: #FFFFEE;
+  color: #800000;
+  font-family: initial !important;
+}
+
+.board-preview.board-futaba a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+.board-preview.board-futaba a:hover {
+  color: #DD0000;
+}
+
+.board-preview.board-futaba .adminbar {
+  text-align: right;
+  clear: both;
+  float: right;
+}
+
+.board-preview.board-futaba .logo {
+  clear: both;
+  text-align: center;
+  font-size: 2em;
+  color: #800000;
+  width: 100%;
+}
+
+.board-preview.board-futaba .theader {
+  background: #E04000;
+  text-align: center;
+  padding: 2px;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.board-preview.board-futaba .postarea {}
+
+.board-preview.board-futaba .rules {
+  font-size: 0.7em;
+}
+
+.board-preview.board-futaba .postblock {
+  background: #EEAA88;
+  color: #800000;
+  font-weight: 800;
+}
+
+.board-preview.board-futaba .footer {
+  text-align: center;
+  font-size: 12px;
+  font-family: serif;
+}
+
+.board-preview.board-futaba .passvalid {
+  background: #EEAA88;
+  text-align: center;
+  width: 100%;
+  color: #ffffff;
+}
+
+.board-preview.board-futaba .dellist {
+  font-weight: bold;
+  text-align: center;
+}
+
+.board-preview.board-futaba .delbuttons {
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+.board-preview.board-futaba .managehead {
+  background: #AAAA66;
+  color: #400000;
+  padding: 0px;
+}
+
+.board-preview.board-futaba .postlists {
+  background: #FFFFFF;
+  width: 100%;
+  padding: 0px;
+  color: #800000;
+}
+
+.board-preview.board-futaba .row1 {
+  background: #EEEECC;
+  color: #800000;
+}
+
+.board-preview.board-futaba .row2 {
+  background: #DDDDAA;
+  color: #800000;
+}
+
+.board-preview.board-futaba .unkfunc {
+  background: inert;
+  color: #789922;
+}
+
+.board-preview.board-futaba .filesize {
+  text-decoration: none;
+}
+
+.board-preview.board-futaba .filetitle {
+  background: inherit;
+  font-size: 1.2em;
+  color: #CC1105;
+  font-weight: 800;
+}
+
+.board-preview.board-futaba .postername {
+  color: #117743;
+  font-weight: bold;
+}
+
+.board-preview.board-futaba .postertrip {
+  color: #228854;
+}
+
+.board-preview.board-futaba .oldpost {
+  color: #CC1105;
+  font-weight: 800;
+}
+
+.board-preview.board-futaba .omittedposts {
+  color: #707070;
+}
+
+.board-preview.board-futaba .reply {
+  background: #F0E0D6;
+  color: #800000;
+}
+
+.board-preview.board-futaba .doubledash {
+  vertical-align: top;
+  clear: both;
+  float: left;
+}
+
+.board-preview.board-futaba .replytitle {
+  font-size: 1.2em;
+  color: #CC1105;
+  font-weight: 800;
+}
+
+.board-preview.board-futaba .commentpostername {
+  color: #117743;
+  font-weight: 800;
+}
+
+.board-preview.board-futaba .thumbnailmsg {
+  font-size: small;
+  color: #800000;
+}
+
+.board-preview.board-futaba .abbrev {
+  color: #707070;
+}
+
+.board-preview.board-futaba .highlight {
+  background: #F0E0D6;
+  color: #800000;
+  border: 2px dashed #EEAA88;
+}

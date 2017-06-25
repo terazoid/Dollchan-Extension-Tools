@@ -1,0 +1,171 @@
+# section   section id (for side panel)
+# ru        caption in russian
+# en        TODO caption in english
+# children  array of features or more sections
+
+# id        feature id (for settings storage)
+# style     CSS to apply
+# level     indentation level (default: 0)
+# icon      optional SVG icon id
+# ru        caption in russian
+# en        TODO caption in english
+# disable   CSS selector for items to be disabled when this feature is enabled
+# enable    CSS selector for items to be enabled when this feature is enabled
+# hint ru en
+# alert ru en
+
+- section: panel
+  ru: Панель
+  children:
+    - section: panel-buttons
+      ru: Скрыть кнопки на панели
+      children:
+        - id: hide-panel-cfg
+          style: "#de-panel-cfg {display: none;}"
+          ru: Настройки
+          icon: "#de-symbol-panel-cfg"
+          alert:
+            ru: "!!ВНИМАНИЕ: если вы закрыли окно настроек и не можете их снова открыть из-за того, что скрыли кнопку настроек, нажмите Alt+S, чтобы открыть окно &quot;Настройки&quot;."
+        - id: hide-panel-fav
+          style: "#de-panel-fav {display: none;}"
+          ru: Избранное
+          icon: "#de-symbol-panel-fav"
+        - id: hide-panel-hid
+          style: "#de-panel-hid {display: none;}"
+          ru: Скрытое
+          icon: "#de-symbol-panel-hid"
+        - id: hide-panel-refresh
+          style: "#de-panel-refresh {display: none;}"
+          ru: Обновить
+          icon: "#de-symbol-panel-refresh"
+        - id: hide-panel-vid
+          style: "#de-panel-vid {display: none;}"
+          ru: Видео
+          icon: "#de-symbol-panel-vid"
+        - id: hide-panel-goback
+          style: "#de-panel-goback {display: none;}"
+          ru: Предыдущая страница
+          icon: "#de-symbol-panel-arrow"
+        - id: hide-panel-gonext
+          style: "#de-panel-gonext {display: none;}"
+          ru: Следующая страница
+          icon: "#de-symbol-panel-arrow"
+        - id: hide-panel-goup
+          style: "#de-panel-goup {display: none;}"
+          ru: В начало сраницы
+          icon: "#de-symbol-panel-arrow"
+        - id: hide-panel-godown
+          style: "#de-panel-godown {display: none;}"
+          ru: В конец страницы
+          icon: "#de-symbol-panel-arrow"
+        - id: hide-panel-expimg
+          style: "#de-panel-expimg {display: none;}"
+          ru: Раскрыть все картинки
+          icon: "#de-symbol-panel-expimg"
+        - id: old-panel-expimg
+          level: 1
+          style: "#de-panel-expimg > .de-panel-svg { display: none; } #de-panel-expimg { background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7); background-repeat: no-repeat; background-position: center; }"
+          ru: <div class="de-panel-svg old-panel-expimg"></div> Вернуть старую иконку раскрытия всех картинок
+        - id: hide-panel-maskimg
+          style: "#de-panel-maskimg {display: none;}"
+          ru: Маскировать картинки
+          icon: "#de-symbol-panel-maskimg"
+        - id: hide-panel-preimg
+          style: "#de-panel-preimg {display: none;}"
+          ru: Предзагрузка картинок
+          icon: "#de-symbol-panel-preimg"
+        - id: hide-panel-savethr
+          style: "#de-panel-savethr {display: none;}"
+          ru: Сохранить на диск
+          icon: "#de-symbol-panel-savethr"
+        - id: hide-panel-upd
+          style: "#de-panel-upd-on, #de-panel-upd-off {display: none;}"
+          ru: Включить автообновление треда
+          icon: "#de-symbol-panel-upd"
+        - id: hide-audio-off
+          style: "#de-panel-audio-off {display: none;}"
+          ru: Звуковое оповещение
+          icon: "#de-symbol-panel-audio-off"
+        - id: hide-panel-catalog
+          style: "#de-panel-catalog {display: none;}"
+          ru: Каталог
+          icon: "#de-symbol-panel-catalog"
+        - id: hide-panel-enable
+          style: "#de-panel-enable {display: none;}"
+          ru: Выключение скрипта
+          icon: "#de-symbol-panel-enable"
+    - section: panel-counters
+      ru: Отключить счетчики
+      children:
+        - id: hide-panel-info
+          style: "#de-panel-info {display: none;}"
+          ru: Счетчик постов/картинок/постящих (целиком)
+          disable: "#hide-panel-info-pcount, #hide-panel-info-icount, #hide-panel-info-acount"
+        - id: hide-panel-info-pcount
+          level: 1
+          style: "#de-panel-info-pcount { display: none; } #de-panel-info-icount::before { content: none; }"
+          ru: Счетчик постов
+        - id: hide-panel-info-icount
+          level: 1
+          style: "#de-panel-info-icount { display: none; } #de-panel-info-acount:not(:empty)::before { content: none; }"
+          ru: Счетчик картинок
+        - id: hide-panel-info-acount
+          level: 1
+          style: "#de-panel-info-acount { display: none; }"
+          ru: Счетчик постящих
+    - section: panel-position
+      ru: Положение панели
+      children:
+        - id: center-panel
+          style: "#de-panel { right: 50%; transform: translateX(50%); border-radius: 15px 15px 0px 0px; }"
+          ru: Разместить панель скрипта по центру окна браузера
+        - id: static-panel
+          style: "#de-main { margin-top: 0; } #de-panel { position: static; width: auto; float: left; }"
+          ru: Закрепить панель скрипта наверху треда над оп-постом
+- section: reflinks
+  ru: Ссылки
+  children:
+  - id: hide-ref-op
+    style: ".de-ref-op::after { content: none; }"
+    ru: Отключить пометку (OP) у <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылок</a> на оп-пост
+    disable: "#square-ref-op"
+  - id: square-ref-op
+    level: 1
+    style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
+    ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
+  - id: hide-ref-my
+    style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
+    ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
+  - id: link-parent-no-border
+    style: ".de-link-parent { outline: none !important; }"
+    ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
+- section: misc
+  ru: Разное
+  children:
+  - id: center-thread
+    style: "body { margin: auto; width: 1000px; }"
+    ru: Разместить весь тред по центру страницы
+  - id: hide-page-num
+    style: ".de-page-num { display: none; }"
+    ru: Убрать счетчик страниц "Страница 1" при бесконечной прокрутке
+  - id: hide-thr-navpanel
+    style: "#de-thr-navpanel { display: none !important; }"
+    ru: Отключить панель навигации слева при разворачивании треда
+  - id: hide-post-note
+    style: ".de-post-note { display: none; }"
+    ru: "Убрать причины скрытия постов autohide #blabla(...)"
+  - id: hide-btn-arrows
+    style: ".de-thread-buttons::before { content: none; }"
+    ru: Убрать &gt;&gt; перед кнопкой "&gt;&gt; [Получить новые посты]"
+  - id: square-fav-inf
+    style: ".de-fav-inf-old::before { content: '['; color: currentColor; } .de-fav-inf-old::after { content: ']'; color: currentColor; }"
+    ru: Сделать квадратные скобки [123] вокруг счетчиков постов в Избранном
+  - id: img-rotate
+    style: ".de-img-center { transform: rotate(90deg); }"
+    ru: Сделать поворот на 90º раскрытых по центру картинок/вебм
+  - id: hide-removed
+    style: ".de-wrap-removed { display: none; }"
+    ru: Убрать удаленные посты (помеченные "удалено")
+  - id: hide-file-utils
+    style: ".de-file-off > .de-file-utils { opacity: 0; }"
+    ru: Убрать кнопку <span class="de-file-btn-txt"></span> в форме

@@ -1,0 +1,17 @@
+# side panel
+
+- href: "#panel"
+  ru: Панель
+  children:
+  - href: "#panel-buttons"
+    ru: Кнопки
+  - href: "#panel-counters"
+    ru: Счетчики
+  - href: "#panel-position"
+    ru: Положение
+- href: "#reflinks"
+  ru: Ссылки
+- href: "#misc"
+  ru: Разное
+- href: "#preview"
+  ru: Превью

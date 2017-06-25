@@ -1,0 +1,18 @@
+<nav id="sidebar" class="col-md-2 hidden-md-down">
+  <ul class="nav nav-pills flex-column">
+    {% for item in site.data.scrollspy %}
+    <li class="nav-item">
+      <a href="{{ item.href }}" class="nav-link">{{ item.ru }}</a>
+      {% if item.children %}
+      <ul class="nav nav-pills flex-column">
+      {% for child in item.children %}
+        <li class="panel-buttons">
+          <a href="{{ child.href }}" class="nav-link">{{ child.ru }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

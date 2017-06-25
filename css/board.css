@@ -1,0 +1,80 @@
+.board-preview {
+  margin: 0;
+  padding: 8px;
+  margin-bottom: auto;
+  line-height: 1.25;
+}
+
+.board-preview blockquote blockquote {
+  margin-left: 0em;
+}
+
+.board-preview form {
+  margin-bottom: 0px;
+}
+
+.board-preview form .trap {
+  display: none;
+}
+
+.board-preview .postarea {
+  text-align: center;
+}
+
+.board-preview .postarea table {
+  margin: 0px auto;
+  text-align: left;
+}
+
+.board-preview .thumb {
+  border: none;
+  float: left;
+  margin: 2px 20px;
+}
+
+.board-preview .nothumb {
+  float: left;
+  background: #eee;
+  border: 2px dashed #aaa;
+  text-align: center;
+  margin: 2px 20px;
+  padding: 1em 0.5em 1em 0.5em;
+}
+
+.board-preview .reply blockquote,
+.board-preview blockquote:last-child {
+  margin-bottom: 0em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+}
+
+.board-preview blockquote {
+  margin-bottom: 16px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+}
+
+.board-preview .reflink a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.board-preview .reply .filesize {
+  margin-left: 20px;
+}
+
+.board-preview .userdelete {
+  float: right;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.board-preview .replypage .replylink {
+  display: none;
+}
+
+.board-preview label {
+	margin: 0;
+}
