@@ -3,15 +3,19 @@
 - href: "#panel"
   ru: Панель
   children:
-  - href: "#panel-buttons"
-    ru: Кнопки
-  - href: "#panel-counters"
-    ru: Счетчики
-  - href: "#panel-position"
-    ru: Положение
+    - href: "#panel-style"
+      ru: Стиль
+    - href: "#panel-buttons"
+      ru: Кнопки
+    - href: "#panel-counters"
+      ru: Счетчики
+    - href: "#panel-position"
+      ru: Положение
 - href: "#reflinks"
   ru: Ссылки
 - href: "#misc"
   ru: Разное
+- href: "#post-btns"
+  ru: Кнопки постов
 - href: "#preview"
   ru: Превью

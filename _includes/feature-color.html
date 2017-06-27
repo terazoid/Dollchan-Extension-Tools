@@ -1,0 +1,24 @@
+<div class="form-sub-{{ feature.level | default: 0 }} container" id="{{ feature.id }}">
+  <div class="form-group row">
+    {% if feature.icon %}
+    <svg class="de-panel-svg">
+      <use xlink:href="{{ feature.icon }}"></use>
+    </svg>
+    {% endif %}
+    <label for="{{ feature.id }}-input" class="col-form-label col-sm-4">
+      <span>{{ feature.ru }}</span>
+    </label>
+    <div class="input-group colorpicker-component feature-color col-sm-4">
+      <input type="text" value="{{ feature.default | default: "#ffffff" }}" class="form-control" data-default="{{ feature.default | default: "#ffffff" }}" data-feature="{{ feature.id }}" data-style="{{ feature.style }}" id="{{ feature.id }}-input" />
+      <span class="input-group-addon"><i></i></span>
+    </div>
+    {% if feature.hint %}
+    <br>
+    <small class="text-muted">{{ feature.hint.ru }}</small>
+    {% endif %}
+    {% if feature.alert %}
+    <br>
+    <small class="text-danger">{{ feature.alert.ru }}</small>
+    {% endif %}
+  </div>
+</div>

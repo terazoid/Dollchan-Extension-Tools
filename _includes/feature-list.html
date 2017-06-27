@@ -11,20 +11,20 @@
       <section id="{{ feature.section }}">
         <h3>{{ feature.ru }}</h3>
         {% for feature in feature.children %}
-        {% include feature-checkbox.html %}
+        {% include feature.html %}
         {% endfor %}
       </section>
       {% else %}
-      {% include feature-checkbox.html %}
+      {% include feature.html %}
       {% endif %}
       {% endfor %}
     </section>
     {% else %}
-    {% include feature-checkbox.html %}
+    {% include feature.html %}
     {% endif %}
     {% endfor %}
   </section>
   {% else %}
-  {% include feature-checkbox.html %}
+  {% include feature.html %}
   {% endif %}
 {% endfor %}

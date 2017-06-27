@@ -1,0 +1,7 @@
+{% if feature.type == "color" %}
+{% include feature-color.html %}
+{% elsif feature.type == "checkbox" %}
+{% include feature-checkbox.html %}
+{% else %}
+{% include feature-checkbox.html %}
+{% endif %}

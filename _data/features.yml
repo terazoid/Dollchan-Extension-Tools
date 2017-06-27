@@ -17,6 +17,20 @@
 - section: panel
   ru: Панель
   children:
+    - section: panel-style
+      ru: Стиль панели
+      children:
+        - id: panel-bg
+          ru: Цвет панели
+          type: color
+          style: "#de-panel, .de-win-head { background-color: %s !important; }"
+        - id: panel-fg
+          ru: Цвет кнопок
+          type: color
+          style: ".de-panel-svg, .de-panel-logo-svg { color: %s; }"
+        - id: panel-square
+          ru: Без закруглений
+          style: "#de-win-reply.de-win, #de-panel, .de-win-head { border-radius: 0 !important; }"
     - section: panel-buttons
       ru: Скрыть кнопки на панели
       children:
@@ -62,6 +76,7 @@
           style: "#de-panel-expimg {display: none;}"
           ru: Раскрыть все картинки
           icon: "#de-symbol-panel-expimg"
+          disable: "#old-panel-expimg"
         - id: old-panel-expimg
           level: 1
           style: "#de-panel-expimg > .de-panel-svg { display: none; } #de-panel-expimg { background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7); background-repeat: no-repeat; background-position: center; }"
@@ -125,47 +140,58 @@
 - section: reflinks
   ru: Ссылки
   children:
-  - id: hide-ref-op
-    style: ".de-ref-op::after { content: none; }"
-    ru: Отключить пометку (OP) у <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылок</a> на оп-пост
-    disable: "#square-ref-op"
-  - id: square-ref-op
-    level: 1
-    style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
-    ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
-  - id: hide-ref-my
-    style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
-    ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
-  - id: link-parent-no-border
-    style: ".de-link-parent { outline: none !important; }"
-    ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
+    - id: hide-ref-op
+      style: ".de-ref-op::after { content: none; }"
+      ru: Отключить пометку (OP) у <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылок</a> на оп-пост
+      disable: "#square-ref-op"
+    - id: square-ref-op
+      level: 1
+      style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
+      ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
+    - id: hide-ref-my
+      style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
+      ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
+    - id: link-parent-no-border
+      style: ".de-link-parent { outline: none !important; }"
+      ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
 - section: misc
   ru: Разное
   children:
-  - id: center-thread
-    style: "body { margin: auto; width: 1000px; }"
-    ru: Разместить весь тред по центру страницы
-  - id: hide-page-num
-    style: ".de-page-num { display: none; }"
-    ru: Убрать счетчик страниц "Страница 1" при бесконечной прокрутке
-  - id: hide-thr-navpanel
-    style: "#de-thr-navpanel { display: none !important; }"
-    ru: Отключить панель навигации слева при разворачивании треда
-  - id: hide-post-note
-    style: ".de-post-note { display: none; }"
-    ru: "Убрать причины скрытия постов autohide #blabla(...)"
-  - id: hide-btn-arrows
-    style: ".de-thread-buttons::before { content: none; }"
-    ru: Убрать &gt;&gt; перед кнопкой "&gt;&gt; [Получить новые посты]"
-  - id: square-fav-inf
-    style: ".de-fav-inf-old::before { content: '['; color: currentColor; } .de-fav-inf-old::after { content: ']'; color: currentColor; }"
-    ru: Сделать квадратные скобки [123] вокруг счетчиков постов в Избранном
-  - id: img-rotate
-    style: ".de-img-center { transform: rotate(90deg); }"
-    ru: Сделать поворот на 90º раскрытых по центру картинок/вебм
-  - id: hide-removed
-    style: ".de-wrap-removed { display: none; }"
-    ru: Убрать удаленные посты (помеченные "удалено")
-  - id: hide-file-utils
-    style: ".de-file-off > .de-file-utils { opacity: 0; }"
-    ru: Убрать кнопку <span class="de-file-btn-txt"></span> в форме
+    - id: center-thread
+      style: "body { margin: auto; width: 1000px; }"
+      ru: Разместить весь тред по центру страницы
+    - id: hide-page-num
+      style: ".de-page-num { display: none; }"
+      ru: Убрать счетчик страниц "Страница 1" при бесконечной прокрутке
+    - id: hide-thr-navpanel
+      style: "#de-thr-navpanel { display: none !important; }"
+      ru: Отключить панель навигации слева при разворачивании треда
+    - id: hide-post-note
+      style: ".de-post-note { display: none; }"
+      ru: "Убрать причины скрытия постов autohide #blabla(...)"
+    - id: hide-btn-arrows
+      style: ".de-thread-buttons::before { content: none; }"
+      ru: Убрать &gt;&gt; перед кнопкой "&gt;&gt; [Получить новые посты]"
+    - id: square-fav-inf
+      style: ".de-fav-inf-old::before { content: '['; color: currentColor; } .de-fav-inf-old::after { content: ']'; color: currentColor; }"
+      ru: Сделать квадратные скобки [123] вокруг счетчиков постов в Избранном
+    - id: img-rotate
+      style: ".de-img-center { transform: rotate(90deg); }"
+      ru: Сделать поворот на 90º раскрытых по центру картинок/вебм
+    - id: hide-removed
+      style: ".de-wrap-removed { display: none; }"
+      ru: Убрать удаленные посты (помеченные "удалено")
+    - id: hide-file-utils
+      style: ".de-file-off > .de-file-utils { opacity: 0; }"
+      ru: Убрать кнопку <span class="de-file-btn-txt"></span> в форме
+- section: post-btns
+  ru: Кнопки постов
+  children:
+    - id: post-btns-bg
+      ru: Цвет фона
+      type: color
+      style: ".de-btn-expthr, .de-btn-fav, .de-btn-fav-sel, .de-btn-hide, .de-btn-hide-user, .de-btn-unhide, .de-btn-unhide-user, .de-btn-rep, .de-btn-sage, .de-btn-src, .de-btn-stick, .de-btn-stick-on { fill: %s; }"
+    - id: post-btns-fg
+      ru: Цвет кнопок
+      type: color
+      style: ".de-btn-expthr, .de-btn-fav, .de-btn-fav-sel, .de-btn-hide, .de-btn-hide-user, .de-btn-unhide, .de-btn-unhide-user, .de-btn-rep, .de-btn-sage, .de-btn-src, .de-btn-stick, .de-btn-stick-on { color: %s; }"
