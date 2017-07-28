@@ -1,0 +1,11 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset 'utf-8';
+@import 'custom'; // variables for bootstrap
+@import '../bower_components/bootstrap/scss/bootstrap';
+@import '../bower_components/bootstrap-colorpicker/src/sass/colorpicker';
+
+@import 'board';
+@import 'dollchan';
+@import 'futaba';

@@ -4,15 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="stylesheet" type="text/css" href="{{ "/css/bootstrap.min.css" | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="{{ "/css/bootstrap-colorpicker.min.css" | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="{{ "/css/board.css" | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="{{ "/css/futaba.css" | relative_url }}">
-  <link rel="stylesheet" type="text/css" href="{{ "/css/index.css" | relative_url }}">
-  <script type="text/javascript" src="{{ "/js/jquery-3.2.1.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/tether.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/bootstrap.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/bootstrap-colorpicker.min.js" | relative_url }}"></script>
-  <script type="text/javascript" src="{{ "/js/index.js" | relative_url }}"></script>
+  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
 </head>
