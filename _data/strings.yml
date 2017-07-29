@@ -1,0 +1,24 @@
+save:
+  ru: Сохранить
+  en: Save
+load:
+  ru: Загрузить
+  en: Load
+copy:
+  ru: Скопировать
+  en: Copy
+close:
+  ru: Закрыть
+  en: Close
+preview:
+  ru: Превью
+  en: Preview
+resultWindowTitle:
+  ru: Код для копипастинга
+  en: Copy and paste this code to Settings > Common > User CSS
+noDollchanDetectedTitle:
+  ru: Требуется куклоскрипт
+  en: No Dollchan Extenstion Tools detected
+noDollchanDetectedMessage:
+  ru: Эта страница не работает без куклоскрипта. Скачайте или включите <a href="https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/">куклоскрипт</a> и обновите страницу.
+  en: This page requires <a href="https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/">Dollchan Extenstion Tools</a>. Please download or enable it and refresh page.

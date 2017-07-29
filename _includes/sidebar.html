@@ -2,12 +2,12 @@
   <ul class="nav nav-pills flex-column">
     {% for item in site.data.scrollspy %}
     <li class="nav-item">
-      <a href="{{ item.href }}" class="nav-link">{{ item.ru }}</a>
+      <a href="{{ item.href }}" class="nav-link">{% assign text = item %}{% include locale.html %}</a>
       {% if item.children %}
       <ul class="nav nav-pills flex-column">
       {% for child in item.children %}
         <li class="panel-buttons">
-          <a href="{{ child.href }}" class="nav-link">{{ child.ru }}</a>
+          <a href="{{ child.href }}" class="nav-link">{% assign text = child %}{% include locale.html %}</a>
         </li>
       {% endfor %}
       </ul>

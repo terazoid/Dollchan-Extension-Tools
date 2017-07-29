@@ -4,7 +4,7 @@
 # icon      optional SVG icon id
 # default   default value
 # ru        caption in russian
-# en        caption in english (TODO)
+# en        caption in english
 # disable   CSS selector for items to be disabled when this feature is enabled
 # enable    CSS selector for items to be enabled when this feature is enabled
 # children  array of features
@@ -13,195 +13,247 @@
 
 - id: panel
   ru: Панель
+  en: Panel
   type: section
   children:
     - id: panel-style
       ru: Стиль панели
+      en: Panel style
       type: section
       children:
         - id: panel-bg
           ru: Цвет панели
+          en: Panel background
           type: color
           style: "#de-panel, .de-win-head { background-color: %s !important; }"
           default: "#777"
         - id: panel-fg
           ru: Цвет кнопок и текста
+          en: Text and buttons color
           type: color
           style: "#de-panel .de-panel-svg, .de-panel-logo-svg, .de-win-title { color: %s; }"
           default: "#fff"
         # - id: panel-content-bg
         #   ru: Цвет фона окна настроек
+        #   en: Settings window background
         #   type: color
         #   style: "#de-main .reply { background-color: %s; }"
         - id: panel-square
           ru: Без закруглений
+          en: No rounded corners
           style: "#de-win-reply.de-win, #de-panel, .de-win-head { border-radius: 0 !important; }"
     - id: panel-buttons
       ru: Скрыть кнопки на панели
+      en: Hide buttons on panel
       type: section
       children:
         - id: hide-panel-cfg
           style: "#de-panel-cfg {display: none;}"
           ru: Настройки
+          en: Settings
           icon: "#de-symbol-panel-cfg"
           alert:
+            en: "!!NOTE: if you closed the settings window and can't open it again because you disabled the button, press Alt+S to open the &quot;Settings&quot; window."
             ru: "!!ВНИМАНИЕ: если вы закрыли окно настроек и не можете их снова открыть из-за того, что скрыли кнопку настроек, нажмите Alt+S, чтобы открыть окно &quot;Настройки&quot;."
         - id: hide-panel-fav
           style: "#de-panel-fav {display: none;}"
           ru: Избранное
+          en: Favorites
           icon: "#de-symbol-panel-fav"
         - id: hide-panel-hid
           style: "#de-panel-hid {display: none;}"
           ru: Скрытое
+          en: Hidden
           icon: "#de-symbol-panel-hid"
         - id: hide-panel-refresh
           style: "#de-panel-refresh {display: none;}"
           ru: Обновить
+          en: Refresh
           icon: "#de-symbol-panel-refresh"
         - id: hide-panel-vid
           style: "#de-panel-vid {display: none;}"
           ru: Видео
+          en: Video links
           icon: "#de-symbol-panel-vid"
         - id: hide-panel-goback
           style: "#de-panel-goback {display: none;}"
           ru: Предыдущая страница
+          en: Go to previous page
           icon: "#de-symbol-panel-arrow"
         - id: hide-panel-gonext
           style: "#de-panel-gonext {display: none;}"
           ru: Следующая страница
+          en: Go to next page
           icon: "#de-symbol-panel-arrow"
         - id: hide-panel-goup
           style: "#de-panel-goup {display: none;}"
           ru: В начало сраницы
+          en: To top of page
           icon: "#de-symbol-panel-arrow"
         - id: hide-panel-godown
           style: "#de-panel-godown {display: none;}"
           ru: В конец страницы
+          en: To bottom of page
           icon: "#de-symbol-panel-arrow"
         - id: hide-panel-expimg
           style: "#de-panel-expimg {display: none;}"
           ru: Раскрыть все картинки
+          en: Expand all images
           icon: "#de-symbol-panel-expimg"
           disable: "#old-panel-expimg"
           children:
             - id: old-panel-expimg
               style: "#de-panel-expimg > .de-panel-svg { display: none; } #de-panel-expimg { background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7); background-repeat: no-repeat; background-position: center; }"
               ru: <div class="de-panel-svg old-panel-expimg"></div> Вернуть старую иконку раскрытия всех картинок
+              en: <div class="de-panel-svg old-panel-expimg"></div> Restore the old icon
         - id: hide-panel-maskimg
           style: "#de-panel-maskimg {display: none;}"
           ru: Маскировать картинки
+          en: Mask images
           icon: "#de-symbol-panel-maskimg"
         - id: hide-panel-preimg
           style: "#de-panel-preimg {display: none;}"
           ru: Предзагрузка картинок
+          en: Preload images
           icon: "#de-symbol-panel-preimg"
         - id: hide-panel-savethr
           style: "#de-panel-savethr {display: none;}"
           ru: Сохранить на диск
+          en: Save to disk
           icon: "#de-symbol-panel-savethr"
         - id: hide-panel-upd
           style: "#de-panel-upd-on, #de-panel-upd-off {display: none;}"
           ru: Включить автообновление треда
+          en: Toggle thread autoupdate
           icon: "#de-symbol-panel-upd"
         - id: hide-audio-off
           style: "#de-panel-audio-off {display: none;}"
           ru: Звуковое оповещение
+          en: Sound notification about new posts
           icon: "#de-symbol-panel-audio-off"
         - id: hide-panel-catalog
           style: "#de-panel-catalog {display: none;}"
           ru: Каталог
+          en: Go to catalog
           icon: "#de-symbol-panel-catalog"
         - id: hide-panel-enable
           style: "#de-panel-enable {display: none;}"
           ru: Выключение скрипта
+          en: Turn on/off the script
           icon: "#de-symbol-panel-enable"
     - id: panel-counters
       ru: Отключить счетчики
+      en: Hide counters
       type: section
       children:
         - id: hide-panel-info
           style: "#de-panel-info {display: none;}"
           ru: Счетчик постов/картинок/постящих (целиком)
+          en: Counter of posts/images/posters in thread (the whole thing)
           disable: "#hide-panel-info-pcount, #hide-panel-info-icount, #hide-panel-info-acount"
           children:
             - id: hide-panel-info-pcount
               style: "#de-panel-info-pcount { display: none; } #de-panel-info-icount::before { content: none; }"
               ru: Счетчик постов
+              en: Counter of posts
             - id: hide-panel-info-icount
               style: "#de-panel-info-icount { display: none; } #de-panel-info-acount:not(:empty)::before { content: none; }"
               ru: Счетчик картинок
+              en: Counter of images
             - id: hide-panel-info-acount
               style: "#de-panel-info-acount { display: none; }"
               ru: Счетчик постящих
+              en: Counter of posters
     - id: panel-position
       ru: Положение панели
+      en: Position of panel
       type: section
       children:
         - id: center-panel
           style: "#de-panel { right: 50%; transform: translateX(50%); border-radius: 15px 15px 0px 0px; }"
           ru: Разместить панель скрипта по центру окна браузера
+          en: Place the panel at the center of a browser window
         - id: static-panel
           style: "#de-main { margin-top: 0; } #de-panel { position: static; width: auto; float: left; }"
           ru: Закрепить панель скрипта наверху треда над оп-постом
+          en: Lock the panel at the top of the thread above the OP
 - id: reflinks
-  ru: Ссылки
+  ru: "&gt;&gt;ссылки"
+  en: "&gt;&gt;links"
   type: section
   children:
     - id: hide-ref-op
       style: ".de-ref-op::after { content: none; }"
       ru: Отключить пометку (OP) у <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылок</a> на оп-пост
+      en: Remove the (OP) tag from <a href="#" class="de-link-pref de-ref-op">&gt;&gt;links</a> to the OP
       disable: "#square-ref-op"
       children:
         - id: square-ref-op
           style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
           ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
+          en: Add square brackets around <a href="#" class="de-link-pref de-ref-op">&gt;&gt;links</a> to the OP
     - id: hide-ref-my
       style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
       ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
+      en: Remove the (You) tag from <a href="#" class="de-link-pref de-ref-my">&gt;&gt;links</a> to my posts?
     - id: link-parent-no-border
       style: ".de-link-parent { outline: none !important; }"
       ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
+      en: Remove the on-hover outline from <a href="#" class="de-link-pref de-link-parent">&gt;&gt;links</a>
 - id: misc
   ru: Разное
+  en: Other
   type: section
   children:
     - id: center-thread
       style: "body { margin: auto; width: 1000px; }"
       ru: Разместить весь тред по центру страницы
+      en: Place the thread at the center of a browser window
     - id: hide-page-num
       style: ".de-page-num { display: none; }"
       ru: Убрать счетчик страниц "Страница 1" при бесконечной прокрутке
+      en: Remove the page numbering "Page 1" when infinite scrolling is enabled
     - id: hide-thr-navpanel
       style: "#de-thr-navpanel { display: none !important; }"
       ru: Отключить панель навигации слева при разворачивании треда
+      en: Disable the navigation panel which shows up when a thread is expanded
     - id: hide-post-note
       style: ".de-post-note { display: none; }"
       ru: "Убрать причины скрытия постов autohide #blabla(...)"
+      en: "Remove the post filtering reason? autohide #blahblah(...)"
     - id: hide-btn-arrows
       style: ".de-thread-buttons::before { content: none; }"
       ru: Убрать &gt;&gt; перед кнопкой "&gt;&gt; [Получить новые посты]"
+      en: Remove the &gt;&gt; from the "&gt;&gt; [Get new posts]" button?
     - id: square-fav-inf
       style: ".de-fav-inf-old::before { content: '['; color: currentColor; } .de-fav-inf-old::after { content: ']'; color: currentColor; }"
       ru: Сделать квадратные скобки [123] вокруг счетчиков постов в Избранном
+      en: Add square brackets [123] around post counters in Favorites
     - id: img-rotate
       style: ".de-img-center { transform: rotate(90deg); }"
       ru: Сделать поворот на 90º раскрытых по центру картинок/вебм
+      en: Rotate opened images/webms by 90º
     - id: hide-removed
       style: ".de-wrap-removed { display: none; }"
       ru: Убрать удаленные посты (помеченные "удалено")
+      en: Remove deleted posts (posts marked as "deleted")
     - id: hide-file-utils
       style: ".de-file-off > .de-file-utils { opacity: 0; }"
       ru: Убрать кнопку <span class="de-file-btn-txt"></span> в форме
+      en: Hidle <span class="de-file-btn-txt"></span> "Enter a link to the file manually" button
 - id: post-btns
   ru: Кнопки постов
+  en: Customize post buttons' colors
   type: section
   children:
     - id: post-btns-bg
       ru: Цвет фона
+      en: Filling color
       type: color
       style: ".de-btn-expthr, .de-btn-fav, .de-btn-fav-sel, .de-btn-hide, .de-btn-hide-user, .de-btn-unhide, .de-btn-unhide-user, .de-btn-rep, .de-btn-sage, .de-btn-src, .de-btn-stick, .de-btn-stick-on { fill: %s; }"
     - id: post-btns-fg
       ru: Цвет кнопок
+      en: Button color
       type: color
       default: "#4f7942"
       style: ".de-btn-expthr, .de-btn-fav, .de-btn-fav-sel, .de-btn-hide, .de-btn-hide-user, .de-btn-unhide, .de-btn-unhide-user, .de-btn-rep, .de-btn-sage, .de-btn-src, .de-btn-stick, .de-btn-stick-on { color: %s; }"

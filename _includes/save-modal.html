@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Код для копипастинга</h5>
+        <h5 class="modal-title">{% assign text = site.data.strings.resultWindowTitle %}{% include locale.html %}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -11,8 +11,8 @@
         <textarea class="form-control"></textarea>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="btn-copy-result">Скопировать</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary" id="btn-copy-result">{% assign text = site.data.strings.copy %}{% include locale.html %}</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">{% assign text = site.data.strings.close %}{% include locale.html %}</button>
       </div>
     </div>
   </div>

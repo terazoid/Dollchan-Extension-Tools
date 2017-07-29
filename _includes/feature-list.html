@@ -1,15 +1,15 @@
 {% for feature in site.data.features %}
   {% if feature.type == "section" %}
   <section id="{{ feature.id }}">
-    <h1>{{ feature.ru }}</h1>
+    <h1>{% assign text = feature %}{% include locale.html %}</h1>
     {% for feature in feature.children %}
     {% if feature.type == "section" %}
     <section id="{{ feature.id }}">
-      <h2>{{ feature.ru }}</h2>
+      <h2>{% assign text = feature %}{% include locale.html %}</h2>
       {% for feature in feature.children %}
       {% if feature.type == "section" %}
       <section id="{{ feature.id }}">
-        <h3>{{ feature.ru }}</h3>
+        <h3>{% assign text = feature %}{% include locale.html %}</h3>
         {% for feature in feature.children %}
         {% include feature.html %}
         {% endfor %}

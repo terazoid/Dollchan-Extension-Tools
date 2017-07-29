@@ -2,10 +2,10 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Требуется куклоскрипт</h5>
+        <h5 class="modal-title">{% assign text = site.data.strings.noDollchanDetectedTitle %}{% include locale.html %}</h5>
       </div>
       <div class="modal-body">
-        <p>Эта страница не работает без куклоскрипта. Скачайте или включите <a href="https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/">куклоскрипт</a> и обновите страницу.</p>
+        <p>{% assign text = site.data.strings.noDollchanDetectedMessage %}{% include locale.html %}</p>
       </div>
     </div>
   </div>

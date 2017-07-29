@@ -7,7 +7,7 @@
     {% endif %}
     <label class="col-form-label col-sm-4 form-check-label">
       <input type="checkbox" class="form-check-input" value="">
-      <span>{{ feature.ru }}</span>
+      <span>{% assign text = feature %}{% include locale.html %}</span>
     </label>
     <div class="input-group colorpicker-component col-sm-4">
       <input type="text" class="form-control"/>
@@ -15,11 +15,11 @@
     </div>
     {% if feature.hint %}
     <br>
-    <small class="text-muted">{{ feature.hint.ru }}</small>
+    <small class="text-muted">{% assign text = feature.hint %}{% include locale.html %}</small>
     {% endif %}
     {% if feature.alert %}
     <br>
-    <small class="text-danger">{{ feature.alert.ru }}</small>
+    <small class="text-danger">{% assign text = feature.alert %}{% include locale.html %}</small>
     {% endif %}
   </div>
 </div>

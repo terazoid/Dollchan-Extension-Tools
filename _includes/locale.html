@@ -1,0 +1,7 @@
+{% if page.language == "en" %}
+{{ text.en | default: "!Please translate me" }}
+{% elsif page.language == "suomi" %}
+{{ text.en | replace: " ", " :" | replace: "A", ":" | replace: "B", ":" | replace: "C", ":" | replace: "D", ":" | replace: "E", ":" | replace: "F", ":" | replace: "G", ":" | replace: "H", ":" | replace: "I", ":" | replace: "J", ":" | replace: "K", ":" | replace: "L", ":" | replace: "M", ":" | replace: "N", ":" | replace: "O", ":" | replace: "P", ":" | replace: "Q", ":" | replace: "R", ":" | replace: "S", ":" | replace: "T", ":" | replace: "U", ":" | replace: "V", ":" | replace: "W", ":" | replace: "X", ":" | replace: "Y", ":" | replace: "Z", ":" | replace: "a", "D" | replace: "b", "D BENIS " | replace: "c", "D" | replace: "d", "D" | replace: "e", "D" | replace: "f", "D FUG " | replace: "g", "D" | replace: "h", "D" | replace: "i", "D" | replace: "j", "D" | replace: "k", "D" | replace: "l", "D" | replace: "m", "D" | replace: "n", "D" | replace: "o", "D" | replace: "p", "D" | replace: "q", "D" | replace: "r", "D" | replace: "s", "D" | replace: "t", "D" | replace: "u", "D" | replace: "v", "D" | replace: "w", "D wat " | replace: "x", "D" | replace: "y", "D" | replace: "z", "D" }}
+{% else %}
+{{ text.ru | default: "!Нет текста" }}
+{% endif %}

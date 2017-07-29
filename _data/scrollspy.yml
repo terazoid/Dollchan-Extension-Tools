@@ -2,20 +2,29 @@
 
 - href: "#panel"
   ru: Панель
+  en: Panel
   children:
     - href: "#panel-style"
       ru: Стиль
+      en: Style
     - href: "#panel-buttons"
       ru: Кнопки
+      en: Buttons
     - href: "#panel-counters"
       ru: Счетчики
+      en: Counters
     - href: "#panel-position"
       ru: Положение
+      en: Position
 - href: "#reflinks"
-  ru: Ссылки
+  ru: "&gt;&gt;ссылки"
+  en: "&gt;&gt;links"
 - href: "#misc"
   ru: Разное
+  en: Other
 - href: "#post-btns"
   ru: Кнопки постов
+  en: Post buttons
 - href: "#preview"
   ru: Превью
+  en: Preview

@@ -17,6 +17,17 @@ $form-check-input-margin-y: .5rem;
 #topnav {
   position: fixed;
   border-radius: 0;
+  padding: 2px;
+  color: #F5F5F5;
+  font: bold 14px/16px arial;
+  text-align: center;
+  cursor: default;
+  background-color: #777;
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 main {

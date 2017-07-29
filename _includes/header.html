@@ -8,8 +8,13 @@
     </span>
     <div class="mr-auto"></div>
     <div class="btn-group">
-      <button type="button" class="btn btn-secondary" disabled>Загрузить</button>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">Сохранить</button>
+      <a href="./en" class="btn btn-secondary{% if page.language == 'en' %} active{% endif %}">En</a>
+      <a href="./ru" class="btn btn-secondary{% if page.language == 'ru' %} active{% endif %}">Ru</a>
+    </div>
+    <div class="mr-5"></div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary" disabled>{% assign text = site.data.strings.load %}{% include locale.html %}</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">{% assign text = site.data.strings.save %}{% include locale.html %}</button>
     </div>
   </nav>
 </header>

@@ -6,12 +6,12 @@
       <use xlink:href="{{ feature.icon }}"></use>
     </svg>
     {% endif %}
-    <span>{{ feature.ru }}</span>
+    <span>{% assign text = feature %}{% include locale.html %}</span>
   </label>
   {% if feature.hint %}
-  <small class="text-muted">{{ feature.hint.ru }}</small>
+  <small class="text-muted">{% assign text = feature.hint %}{% include locale.html %}</small>
   {% endif %}
   {% if feature.alert %}
-  <small class="text-danger">{{ feature.alert.ru }}</small>
+  <small class="text-danger">{% assign text = feature.alert %}{% include locale.html %}</small>
   {% endif %}
 </div>
