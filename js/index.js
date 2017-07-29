@@ -37,7 +37,7 @@ $(() => {
           $(featureElement).find('.colorpicker-component').colorpicker('enable');
           value = $(featureElement)
             .find('.colorpicker-component')
-              .data('colorpicker').color.toHex();
+              .data('colorpicker').input.val();
         } else {
           value = $(featureElement).find(':text').val();
         }
