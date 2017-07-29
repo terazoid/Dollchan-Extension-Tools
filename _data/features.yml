@@ -1,38 +1,44 @@
-# section   section id (for side panel)
-# ru        caption in russian
-# en        TODO caption in english
-# children  array of features or more sections
-
 # id        feature id (for settings storage)
 # style     CSS to apply
-# level     indentation level (default: 0)
+# type      color, section or checkbox (default: checkbox)
 # icon      optional SVG icon id
+# default   default value
 # ru        caption in russian
-# en        TODO caption in english
+# en        caption in english (TODO)
 # disable   CSS selector for items to be disabled when this feature is enabled
 # enable    CSS selector for items to be enabled when this feature is enabled
+# children  array of features
 # hint ru en
 # alert ru en
 
-- section: panel
+- id: panel
   ru: Панель
+  type: section
   children:
-    - section: panel-style
+    - id: panel-style
       ru: Стиль панели
+      type: section
       children:
         - id: panel-bg
           ru: Цвет панели
           type: color
           style: "#de-panel, .de-win-head { background-color: %s !important; }"
+          default: "#777"
         - id: panel-fg
-          ru: Цвет кнопок
+          ru: Цвет кнопок и текста
           type: color
-          style: ".de-panel-svg, .de-panel-logo-svg { color: %s; }"
+          style: "#de-panel .de-panel-svg, .de-panel-logo-svg, .de-win-title { color: %s; }"
+          default: "#fff"
+        # - id: panel-content-bg
+        #   ru: Цвет фона окна настроек
+        #   type: color
+        #   style: "#de-main .reply { background-color: %s; }"
         - id: panel-square
           ru: Без закруглений
           style: "#de-win-reply.de-win, #de-panel, .de-win-head { border-radius: 0 !important; }"
-    - section: panel-buttons
+    - id: panel-buttons
       ru: Скрыть кнопки на панели
+      type: section
       children:
         - id: hide-panel-cfg
           style: "#de-panel-cfg {display: none;}"
@@ -77,10 +83,10 @@
           ru: Раскрыть все картинки
           icon: "#de-symbol-panel-expimg"
           disable: "#old-panel-expimg"
-        - id: old-panel-expimg
-          level: 1
-          style: "#de-panel-expimg > .de-panel-svg { display: none; } #de-panel-expimg { background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7); background-repeat: no-repeat; background-position: center; }"
-          ru: <div class="de-panel-svg old-panel-expimg"></div> Вернуть старую иконку раскрытия всех картинок
+          children:
+            - id: old-panel-expimg
+              style: "#de-panel-expimg > .de-panel-svg { display: none; } #de-panel-expimg { background-image: url(data:image/gif;base64,R0lGODlhGQAZAIAAAPDw8P///yH5BAEAAAEALAAAAAAZABkAQAI9jI+pGwDn4GPL2Wep3rxXFEFel42mBE6kcYXqFqYnVc72jTPtS/KNr5OJOJMdq4diAXWvS065NNVwseehAAA7); background-repeat: no-repeat; background-position: center; }"
+              ru: <div class="de-panel-svg old-panel-expimg"></div> Вернуть старую иконку раскрытия всех картинок
         - id: hide-panel-maskimg
           style: "#de-panel-maskimg {display: none;}"
           ru: Маскировать картинки
@@ -109,27 +115,27 @@
           style: "#de-panel-enable {display: none;}"
           ru: Выключение скрипта
           icon: "#de-symbol-panel-enable"
-    - section: panel-counters
+    - id: panel-counters
       ru: Отключить счетчики
+      type: section
       children:
         - id: hide-panel-info
           style: "#de-panel-info {display: none;}"
           ru: Счетчик постов/картинок/постящих (целиком)
           disable: "#hide-panel-info-pcount, #hide-panel-info-icount, #hide-panel-info-acount"
-        - id: hide-panel-info-pcount
-          level: 1
-          style: "#de-panel-info-pcount { display: none; } #de-panel-info-icount::before { content: none; }"
-          ru: Счетчик постов
-        - id: hide-panel-info-icount
-          level: 1
-          style: "#de-panel-info-icount { display: none; } #de-panel-info-acount:not(:empty)::before { content: none; }"
-          ru: Счетчик картинок
-        - id: hide-panel-info-acount
-          level: 1
-          style: "#de-panel-info-acount { display: none; }"
-          ru: Счетчик постящих
-    - section: panel-position
+          children:
+            - id: hide-panel-info-pcount
+              style: "#de-panel-info-pcount { display: none; } #de-panel-info-icount::before { content: none; }"
+              ru: Счетчик постов
+            - id: hide-panel-info-icount
+              style: "#de-panel-info-icount { display: none; } #de-panel-info-acount:not(:empty)::before { content: none; }"
+              ru: Счетчик картинок
+            - id: hide-panel-info-acount
+              style: "#de-panel-info-acount { display: none; }"
+              ru: Счетчик постящих
+    - id: panel-position
       ru: Положение панели
+      type: section
       children:
         - id: center-panel
           style: "#de-panel { right: 50%; transform: translateX(50%); border-radius: 15px 15px 0px 0px; }"
@@ -137,25 +143,27 @@
         - id: static-panel
           style: "#de-main { margin-top: 0; } #de-panel { position: static; width: auto; float: left; }"
           ru: Закрепить панель скрипта наверху треда над оп-постом
-- section: reflinks
+- id: reflinks
   ru: Ссылки
+  type: section
   children:
     - id: hide-ref-op
       style: ".de-ref-op::after { content: none; }"
       ru: Отключить пометку (OP) у <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылок</a> на оп-пост
       disable: "#square-ref-op"
-    - id: square-ref-op
-      level: 1
-      style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
-      ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
+      children:
+        - id: square-ref-op
+          style: ".de-ref-op::after { content: ' [OP]'; } .de-ref-op.de-ref-my::after { content: ' [OP](You)'; }"
+          ru: Квадратные скобки в <a href="#" class="de-link-pref de-ref-op">&gt;&gt;ссылках</a> на оп-пост
     - id: hide-ref-my
       style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
       ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
     - id: link-parent-no-border
       style: ".de-link-parent { outline: none !important; }"
       ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
-- section: misc
+- id: misc
   ru: Разное
+  type: section
   children:
     - id: center-thread
       style: "body { margin: auto; width: 1000px; }"
@@ -184,8 +192,9 @@
     - id: hide-file-utils
       style: ".de-file-off > .de-file-utils { opacity: 0; }"
       ru: Убрать кнопку <span class="de-file-btn-txt"></span> в форме
-- section: post-btns
+- id: post-btns
   ru: Кнопки постов
+  type: section
   children:
     - id: post-btns-bg
       ru: Цвет фона
@@ -194,4 +203,5 @@
     - id: post-btns-fg
       ru: Цвет кнопок
       type: color
+      default: "#4f7942"
       style: ".de-btn-expthr, .de-btn-fav, .de-btn-fav-sel, .de-btn-hide, .de-btn-hide-user, .de-btn-unhide, .de-btn-unhide-user, .de-btn-rep, .de-btn-sage, .de-btn-src, .de-btn-stick, .de-btn-stick-on { color: %s; }"

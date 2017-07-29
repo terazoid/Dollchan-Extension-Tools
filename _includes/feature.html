@@ -5,3 +5,11 @@
 {% else %}
 {% include feature-checkbox.html %}
 {% endif %}
+
+{% if feature.children %}
+<div class="ml-3">
+  {% for feature in feature.children %}
+  {% include feature.html %}
+  {% endfor %}
+</div>
+{% endif %}
