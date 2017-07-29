@@ -1,165 +1,175 @@
 .board-preview.board-futaba {
-  background: #FFFFEE;
-  color: #800000;
+  $background-color: #ffffee;
+  $text-color: #800000;
+  $highlight-background-color: #e04000;
+  $highlight-text-color: #ffffee;
+  $title-text-color: #cc1105;
+  $block-background-color: #eeaa88;
+  $link-color: #0000ee;
+  $link-hover-color: #dd0000;
+  $muted-text-color: #707070;
+  $name-text-color: #117743;
+  $tripcode-text-color: #228854;
+  $table-row1-background-color: #eeeecc;
+  $table-row2-background-color: #ddddaa;
+  $post-background-color: #f0e0d6;
+
+  /* I dunno what is this */
+  $unkfunc-text-color: #789922;
+  $postlists-background-color: #ffffff;
+  $passvalid-text-color: #ffffff;
+  $managehead-background-color: #aaaa66;
+  $managehead-text-color: #400000;
+
+  $font-size-small: 0.7em;
+  $font-size-big: 1.7em;
+  $font-size-huge: 2em;
+
+  $font-weight-bold: 800;
+
+  background: $background-color;
+  color: $text-color;
   font-family: initial !important;
-}
 
-.board-preview.board-futaba a {
-  color: #0000EE;
-  text-decoration: underline;
-}
+  a {
+    text-decoration: underline;
 
-.board-preview.board-futaba a:hover {
-  color: #DD0000;
-}
+    color: $link-color;
+    :hover {
+      color: $link-hover-color;
+    }
+  }
 
-.board-preview.board-futaba .adminbar {
-  text-align: right;
-  clear: both;
-  float: right;
-}
+  .adminbar {
+    text-align: right;
+    clear: both;
+    float: right;
+  }
 
-.board-preview.board-futaba .logo {
-  clear: both;
-  text-align: center;
-  font-size: 2em;
-  color: #800000;
-  width: 100%;
-}
+  .logo {
+    clear: both;
+    text-align: center;
+    font-size: $font-size-huge;
+    color: $text-color;
+    width: 100%;
+  }
 
-.board-preview.board-futaba .theader {
-  background: #E04000;
-  text-align: center;
-  padding: 2px;
-  color: #FFFFFF;
-  width: 100%;
-}
+  .theader {
+    background: $highlight-background-color;
+    text-align: center;
+    padding: 2px;
+    color: $highlight-text-color;
+    width: 100%;
+  }
 
-.board-preview.board-futaba .postarea {}
+  .rules {
+    font-size: $font-size-small;
+  }
 
-.board-preview.board-futaba .rules {
-  font-size: 0.7em;
-}
+  .postblock {
+    background: $block-background-color;
+    color: $text-color;
+    font-weight: $font-weight-bold;
+  }
 
-.board-preview.board-futaba .postblock {
-  background: #EEAA88;
-  color: #800000;
-  font-weight: 800;
-}
+  .footer {
+    text-align: center;
+    font-size: $font-size-small;
+    font-family: serif;
+  }
 
-.board-preview.board-futaba .footer {
-  text-align: center;
-  font-size: 12px;
-  font-family: serif;
-}
+  .passvalid {
+    background: $block-background-color;
+    text-align: center;
+    width: 100%;
+    color: $passvalid-text-color;
+  }
 
-.board-preview.board-futaba .passvalid {
-  background: #EEAA88;
-  text-align: center;
-  width: 100%;
-  color: #ffffff;
-}
+  .dellist {
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
 
-.board-preview.board-futaba .dellist {
-  font-weight: bold;
-  text-align: center;
-}
+  .delbuttons {
+    padding-bottom: 4px;
+    text-align: center;
+  }
 
-.board-preview.board-futaba .delbuttons {
-  text-align: center;
-  padding-bottom: 4px;
-}
+  .managehead {
+    background: $managehead-background-color;
+    color: $managehead-text-color;
+    padding: 0px;
+  }
 
-.board-preview.board-futaba .managehead {
-  background: #AAAA66;
-  color: #400000;
-  padding: 0px;
-}
+  .postlists {
+    background: $postlists-background-color;
+    width: 100%;
+    padding: 0px;
+    color: $text-color;
+  }
 
-.board-preview.board-futaba .postlists {
-  background: #FFFFFF;
-  width: 100%;
-  padding: 0px;
-  color: #800000;
-}
+  .row1 {
+    background: $table-row1-background-color;
+    color: $text-color;
+  }
 
-.board-preview.board-futaba .row1 {
-  background: #EEEECC;
-  color: #800000;
-}
+  .row2 {
+    background: $table-row2-background-color;
+    color: $text-color;
+  }
 
-.board-preview.board-futaba .row2 {
-  background: #DDDDAA;
-  color: #800000;
-}
+  .unkfunc {
+    background: inert;
+    color: $unkfunc-text-color;
+  }
 
-.board-preview.board-futaba .unkfunc {
-  background: inert;
-  color: #789922;
-}
+  .filesize {
+    text-decoration: none;
+  }
 
-.board-preview.board-futaba .filesize {
-  text-decoration: none;
-}
+  .postername, .commentpostername {
+    color: $name-text-color;
+    font-weight: $font-weight-bold;
+  }
 
-.board-preview.board-futaba .filetitle {
-  background: inherit;
-  font-size: 1.2em;
-  color: #CC1105;
-  font-weight: 800;
-}
+  .postertrip {
+    color: $tripcode-text-color;
+  }
 
-.board-preview.board-futaba .postername {
-  color: #117743;
-  font-weight: bold;
-}
+  .omittedposts, .abbrev {
+    color: $muted-text-color;
+  }
 
-.board-preview.board-futaba .postertrip {
-  color: #228854;
-}
+  .doubledash {
+    vertical-align: top;
+    clear: both;
+    float: left;
+  }
 
-.board-preview.board-futaba .oldpost {
-  color: #CC1105;
-  font-weight: 800;
-}
+  .filetitle {
+    background: inherit;
+  }
 
-.board-preview.board-futaba .omittedposts {
-  color: #707070;
-}
+  .replytitle, .filetitle {
+    font-size: $font-size-big;
+  }
 
-.board-preview.board-futaba .reply {
-  background: #F0E0D6;
-  color: #800000;
-}
+  .filetitle, .replytitle, .oldpost {
+    color: $title-text-color;
+    font-weight: $font-weight-bold;
+  }
 
-.board-preview.board-futaba .doubledash {
-  vertical-align: top;
-  clear: both;
-  float: left;
-}
+  .thumbnailmsg {
+    font-size: $font-size-small;
+    color: $text-color;
+  }
 
-.board-preview.board-futaba .replytitle {
-  font-size: 1.2em;
-  color: #CC1105;
-  font-weight: 800;
-}
+  .reply, .highlight {
+    background: $post-background-color;
+    color: $text-color;
+  }
 
-.board-preview.board-futaba .commentpostername {
-  color: #117743;
-  font-weight: 800;
-}
-
-.board-preview.board-futaba .thumbnailmsg {
-  font-size: small;
-  color: #800000;
-}
-
-.board-preview.board-futaba .abbrev {
-  color: #707070;
-}
-
-.board-preview.board-futaba .highlight {
-  background: #F0E0D6;
-  color: #800000;
-  border: 2px dashed #EEAA88;
+  .highlight {
+    border: 2px dashed $block-background-color;
+  }
 }
