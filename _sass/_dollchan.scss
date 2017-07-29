@@ -2,6 +2,10 @@
   z-index: 9999;
 }
 
+.de-link-ref {
+  text-decoration: none !important;
+}
+
 #hide-panel-goback svg.de-panel-svg {
   transform: rotate(-180deg);
 }

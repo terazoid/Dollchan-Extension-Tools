@@ -52,6 +52,10 @@
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 16px;
+
+    p {
+      margin: 16px 0 0 0;
+    }
   }
 
   .reflink a {
@@ -75,5 +79,14 @@
 
   label {
     margin: 0;
+    display: inline;
+  }
+
+  table {
+    border-collapse: separate;
+  }
+
+  input {
+    margin: 3px 3px 3px 4px;
   }
 }

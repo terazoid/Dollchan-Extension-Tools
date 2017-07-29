@@ -27,7 +27,7 @@
                     <td class="reply" id="reply{{ reply.id }}">
                       <a name="{{ reply.id }}"></a>
                       <label>
-                        <input type="checkbox" name="delete" value="{{ reply.id }}"> <span class="replytitle"></span> <span class="commentpostername">{{ rerply.postername }}</span> {{ reply.date }}</label> <span class="reflink"> <a href="#">No.{{ reply.id }}</a>  </span>&nbsp;
+                        <input type="checkbox" name="delete" value="{{ reply.id }}"> <span class="replytitle"></span> <span class="commentpostername">{{ reply.postername }}</span> {{ reply.date }}</label> <span class="reflink"> <a href="#">No.{{ reply.id }}</a>  </span>&nbsp;
                       <blockquote>
                         <p><a href="#">&gt;&gt;{{ reply.to }}</a>
                           <br>{{ reply.message | newline_to_br }}</p>

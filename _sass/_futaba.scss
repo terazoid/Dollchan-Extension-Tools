@@ -1,4 +1,4 @@
-.board-preview.board-futaba {
+.board-futaba {
   $background-color: #ffffee;
   $text-color: #800000;
   $highlight-background-color: #e04000;
@@ -22,6 +22,7 @@
   $managehead-text-color: #400000;
 
   $font-size-small: 0.7em;
+  $font-size-medium: 1.2em;
   $font-size-big: 1.7em;
   $font-size-huge: 2em;
 
@@ -151,7 +152,7 @@
   }
 
   .replytitle, .filetitle {
-    font-size: $font-size-big;
+    font-size:  $font-size-medium;
   }
 
   .filetitle, .replytitle, .oldpost {
