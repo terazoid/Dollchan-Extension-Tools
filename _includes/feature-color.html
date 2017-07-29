@@ -1,15 +1,16 @@
-<div class="form-sub-{{ feature.level | default: 0 }} container" id="{{ feature.id }}">
+<div class="form-check container" id="{{ feature.id }}" data-feature="{{ feature.id }}" data-type="{{ feature.type }}" data-style="{{ feature.style }}" data-default="{{ feature.default | default: '#ffffff' }}">
   <div class="form-group row">
     {% if feature.icon %}
     <svg class="de-panel-svg">
       <use xlink:href="{{ feature.icon }}"></use>
     </svg>
     {% endif %}
-    <label for="{{ feature.id }}-input" class="col-form-label col-sm-4">
+    <label class="col-form-label col-sm-4 form-check-label">
+      <input type="checkbox" class="form-check-input" value="">
       <span>{{ feature.ru }}</span>
     </label>
-    <div class="input-group colorpicker-component feature-color col-sm-4">
-      <input type="text" value="{{ feature.default | default: "#ffffff" }}" class="form-control" data-default="{{ feature.default | default: "#ffffff" }}" data-feature="{{ feature.id }}" data-style="{{ feature.style }}" id="{{ feature.id }}-input" />
+    <div class="input-group colorpicker-component col-sm-4">
+      <input type="text" class="form-control"/>
       <span class="input-group-addon"><i></i></span>
     </div>
     {% if feature.hint %}

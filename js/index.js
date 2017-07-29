@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 $(() => {
   // if no Dollchan detected
   if (!$('#de-main').length) {
@@ -8,75 +10,105 @@ $(() => {
     return;
   }
 
-  $('.feature-color').colorpicker({ /*options...*/ });
-
-  const getStorage = (key) => {
-    return JSON.parse(window.localStorage.getItem(key) || '{}');
-  }
-
-  const setStorage = (key, data) => {
-    window.localStorage.setItem(key, JSON.stringify(data));
-  }
+  // storage
+  const getStorage = (key) => JSON.parse(window.localStorage.getItem(key) || '{}');
+  const setStorage = (key, data) => window.localStorage.setItem(key, JSON.stringify(data));
 
   const currentStyle = {};
   let selectedFeatures = getStorage('selectedFeatures');
 
-  const inputChanged = (input) => {
-    const feature = input.dataset.feature;
-    const value = input.value || input.checked;
-    const def = input.dataset.default;
-    if (value == def || !value) {
-      $(`#${ feature }-style`).remove();
-      delete currentStyle[feature];
-      delete selectedFeatures[feature];
+  const featureChnanged = (featureElement) => {
+    const feature = featureElement.dataset.feature;
+    const type = featureElement.dataset.type || 'checkbox';
+    const isEnabled = $(featureElement).find(':checkbox').prop('checked');
+    let style = featureElement.dataset.style || '';
+    let value = true;
+
+    if (!isEnabled) {
+        $(`#${ feature }-style`).remove();
+        delete currentStyle[feature];
+        delete selectedFeatures[feature];
+        if (type === 'color') {
+          $(featureElement).find('.colorpicker-component').colorpicker('disable');
+        }
     } else {
-      const style = input.dataset.style.replace('%s', value);
-      currentStyle[feature] = style;
+      if (type !== 'checkbox') {
+        if (type === 'color') {
+          $(featureElement).find('.colorpicker-component').colorpicker('enable');
+          value = $(featureElement)
+            .find('.colorpicker-component')
+              .data('colorpicker').color.toHex();
+        } else {
+          value = $(featureElement).find(':text').val();
+        }
+        style = style.replace('%s', value);
+      }
       selectedFeatures[feature] = value;
+      currentStyle[feature] = style;
       if ($(`#${ feature }-style`).html(style).length === 0) {
         $('head').append(`<style type="text/css" id="${ feature }-style">${ style }</style>`);
       }
     }
-    const disableQuery = input.dataset.disable;
+
+    const disableQuery = featureElement.dataset.disable;
     if (disableQuery) {
-      $(disableQuery).toggleClass('text-muted', value)
-        .find('input').prop('disabled', value);
+      const disEl = $(disableQuery);
+      disEl.toggleClass('text-muted', isEnabled);
+      disEl.find('input').prop('disabled', isEnabled);
+      disEl.find('.colorpicker-component').colorpicker(isEnabled ? 'enable' : 'disable');
     }
-    const enableQuery = input.dataset.enable;
+    const enableQuery = featureElement.dataset.enable;
     if (enableQuery) {
-      $(enableQuery).toggleClass('text-muted', !value)
-        .find('input').prop('disabled', !value);
+      const enEl = $(enableQuery);
+      enEl.toggleClass('text-muted', !isEnabled);
+      enEl.find('input').prop('disabled', !isEnabled);
+      enEl.find('.colorpicker-component').colorpicker(!isEnabled ? 'enable' : 'disable');
     }
-  }
 
-  $('input[data-feature]').change((event) => {
-    inputChanged(event.target);
     setStorage('selectedFeatures', selectedFeatures);
-  });
+  };
 
-  $('input[data-feature]').map((index, input) => {
-    const feature = input.dataset.feature;
-    const value = selectedFeatures[feature];
-    if (value) {
-      if (input.type === 'checkbox') {
-        input.checked = value;
-      } else {
-        input.value = value;
-        $(input).parent('.feature-color').colorpicker('setValue', value);
+  const init = () => {
+    // init inputs
+    $('[data-feature]').map((index, featureElement) => {
+      const feature = featureElement.dataset.feature;
+      const defaultVal = featureElement.dataset.default;
+      const type = featureElement.dataset.type || 'checkbox';
+      const style = featureElement.dataset.style || '';
+      const callback = featureChnanged.bind(null, featureElement);
+
+      $(featureElement)
+        .find(':checkbox')
+          .change(callback)
+          .prop('checked', feature in selectedFeatures);
+
+      if (type === 'color') {
+        let value = selectedFeatures[feature] || defaultVal;
+        $(featureElement)
+          .find('.colorpicker-component')
+            .colorpicker({color: value})
+            .on('changeColor', callback);
       }
-      inputChanged(input);
-    }
-  });
 
-  $('#saveModal').on('show.bs.modal', (event) => {
-    let x = Object.keys(currentStyle).reduce((previous, key) => {
-      return previous + ' ' + currentStyle[key];
-    }, '');
-    $('#saveModal').find('textarea').text(x);
-  });
+      callback();
+    });
 
-  $('#btn-copy-result').click((event) => {
-    $('#saveModal').find('textarea').focus().select();
-    document.execCommand("copy");
-  })
+    // init save dialog button
+    $('#saveModal').on('show.bs.modal', (event) => {
+      const x = Object.keys(currentStyle).reduce((previous, key) => {
+        return previous + ' ' + currentStyle[key];
+      }, '');
+      $('#saveModal').find('textarea').text(x);
+    });
+
+    // init copy button
+    $('#btn-copy-result').click((event) => {
+      $('#saveModal').find('textarea').focus().select();
+      document.execCommand("copy");
+    });
+  };
+
+
+
+  init();
 });
