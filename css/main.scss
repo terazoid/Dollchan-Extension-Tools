@@ -9,3 +9,9 @@
 @import 'board';
 @import 'dollchan';
 @import 'futaba';
+
+@import 'github-badge';
+
+#github {
+  @include github-badge($background: green, $backside-background: red);
+}

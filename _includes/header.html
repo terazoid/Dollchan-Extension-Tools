@@ -1,6 +1,6 @@
 <header class="site-header" role="banner">
   <nav class="nav fixed-top de-win-head" id="topnav">
-    <span class="navbar-brand">
+    <span class="navbar-brand container">
       <svg class="de-panel-logo-svg" style="vertical-align: text-top;">
         <use xlink:href="#de-symbol-panel-logo"></use>
       </svg>
@@ -17,4 +17,8 @@
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">{% assign text = site.data.strings.save %}{% include locale.html %}</button>
     </div>
   </nav>
+  <a id="github" href="https://github.com/{{ site.repository }}" class="hidden-sm-down">
+    <span>Fork me on GitHub!</span>
+    <span>...desu!</span>
+  </a>
 </header>
