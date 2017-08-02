@@ -1,16 +1,19 @@
-<footer class="text-muted">
+<footer class="text-muted bg-faded">
+  <hr>
   <div class="container">
-    <ul>
-      <li>
-        {% include icon-github.html content="Dollchan Extension Tools" url="SthephanShinkufag/Dollchan-Extension-Tools" %}
-      </li>
-      <li>
-        {% include icon-github.html content="Wiki" url="SthephanShinkufag/Dollchan-Extension-Tools/wiki/" %}
-      </li>
-      <li>
-        <a href="http://www.freedollchan.org/scripts/">Freedollchan</a>
-      </li>
-    </ul>
+    <nav class="row">
+      {% assign links = site.data.sitemap.links.main %}
+      {% include footer-links.html %}
+      {% assign links = site.data.sitemap.links.customize %}
+      {% include footer-links.html %}
+      {% assign links = site.data.sitemap.links.develop %}
+      {% include footer-links.html %}
+      {% assign links = site.data.sitemap.links.info %}
+      {% include footer-links.html %}
+    </nav>
+    <div class="text-center">
+      <span>Copyright © {{ site.time| date: "%Y" }} Dollchan Extension Tools Team</span>
+    </div>
   </div>
 </footer>
 <script src="{{ site.baseurl }}/js/jquery-3.2.1.min.js" }}"></script>

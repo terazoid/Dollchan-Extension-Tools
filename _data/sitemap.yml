@@ -1,0 +1,37 @@
+# url must be without /en/ or /ru/ lang. direcory
+links:
+  main:
+    - url: /
+      en: Home
+      ru: Главная
+    - url: installation
+      en: Script installation
+      ru: Установка скрипта
+  customize:
+    - url: spells
+      en: Spells guide
+      ru: Руководство по спеллам (новый формат)
+    - url: spells-old
+      ru: Руководство по спеллам (старый формат)
+    - url: settings-time
+      en: Time correction guide
+      ru: Руководство по корректировке времени
+    - url: css-tricks
+      en: CSS tricks
+      ru: CSS трюки
+  develop:
+    - url: bug-writing-guidelines
+      ru: Руководство по сообщениям об ошибке
+    - url: dollchan-api
+      en: Dollchan API
+      ru: Dollchan API
+    - url: issue-writing-guidelines 
+      ru:  Руководство по написанию обращений
+    - url: how-to-use-issue-tags
+      ru: Типы тегов в обращениях
+  info:
+    - url: supported
+      en: Supported image boards
+      ru: Поддерживаемые имиджборды
+    - url: versions
+      ru: Версии и изменения
