@@ -1,9 +1,58 @@
 ---
-layout: default
+layout: sidebar
 language: en
 translations:
   ru: /ru/spells
 title: Spells guide
+toc:
+  - href: "#magic-spells"
+    title: "Magic spells"
+  - href: "#hiding-spells"
+    title: "Hiding spells"
+    children:
+      - href: "#words"
+        title: "#words"
+      - href: "#examples-of-logical-operations"
+        title: "Examples of logical operations"
+      - href: "#all"
+        title: "#all"
+      - href: "#op"
+        title: "#op"
+      - href: "#anti-wipe-detector-wipe"
+        title: "Anti-wipe detector #wipe"
+      - href: "#subj"
+        title: "#subj"
+      - href: "#name"
+        title: "#name"
+      - href: "#trip"
+        title: "#trip"
+      - href: "#sage"
+        title: "#sage"
+      - href: "#tlen"
+        title: "#tlen"
+      - href: "#num"
+        title: "#num"
+      - href: "#img"
+        title: "#img"
+      - href: "#imgn"
+        title: "#imgn"
+      - href: "#ihash"
+        title: "#ihash"
+      - href: "#exp"
+        title: "#exp"
+      - href: "#exph"
+        title: "#exph"
+      - href: "#video"
+        title: "#video"
+      - href: "#vauthor"
+        title: "#vauthor"
+  - href: "#replacing-spells"
+    title: "Replacing spells"
+    children:
+      - href: "#rep"
+        title: "#rep"
+  - href: "#outrep"
+    title: "#outrep H"
 ---
 
 ## Magic spells

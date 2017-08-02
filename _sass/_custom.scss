@@ -6,12 +6,25 @@ $form-check-input-margin-y: .5rem;
 }
 
 #sidebar {
-  position: fixed;
+  position: sticky;
   top: 41px;
-  right: 0;
   margin: 0;
-  bottom: 0;
   padding: 0;
+
+  .nav-link:not(.active) + ul {
+      max-height: 0;
+  }
+
+  ul {
+      max-height: 1000px;
+      transition: max-height ease-in .25s;
+      overflow: hidden;
+  }
+
+  .nav.flex-column ul {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }
 }
 
 #topnav {
@@ -34,7 +47,3 @@ main {
   margin-top: 38px;
 }
 
-.nav.flex-column ul {
-  font-size: 0.8rem;
-  margin-left: 1rem;
-}

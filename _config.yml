@@ -20,6 +20,10 @@ github_username:  WagonOfDoubt
 
 # Build settings
 markdown: kramdown
+kramdown:
+  toc_levels: 2..3
+  transliterated_header_ids: true
+  parse_block_html: true
 gems: [bootstrap]
 exclude:
   - Gemfile

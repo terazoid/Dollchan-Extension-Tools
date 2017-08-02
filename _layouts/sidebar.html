@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body data-spy="scroll" data-target="#sidebar" data-offset="38">
+
+    {% include header.html %}
+
+    <div class="container">
+      <div class="row">
+        <main class="page-content col-md-10">
+            {{ content }}
+        </main>
+        <aside class="col-md-2 hidden-sm-down">
+          {% include sidebar.html %}
+        </aside>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

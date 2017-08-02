@@ -1,17 +1,13 @@
 ---
-layout: default
+layout: sidebar
 ---
 
 {% include save-modal.html %}
+
 {% include error-modal.html %}
 
-<div class="col-md-10">
+{{ content }}
 
-  {{ content }}
+{% include feature-list.html %}
 
-  {% include feature-list.html %}
-
-  {% include board-preview.html %}
-</div>
-
-{% include sidebar.html %}
+{% include board-preview.html %}

@@ -4,6 +4,26 @@ language: ru
 translations:
   en: /en/css-tricks
 title: CSS трюки
+toc: 
+  - href: "#panel"
+    title: Панель
+    children:
+      - href: "#panel-style"
+        title: Стиль
+      - href: "#panel-buttons"
+        title: Кнопки
+      - href: "#panel-counters"
+        title: Счетчики
+      - href: "#panel-position"
+        title: Положение
+  - href: "#reflinks"
+    title: "&gt;&gt;ссылки"
+  - href: "#misc"
+    title: Разное
+  - href: "#post-btns"
+    title: Кнопки постов
+  - href: "#preview"
+    title: Превью
 board:
   pagePrefix: Страница
   pages:
