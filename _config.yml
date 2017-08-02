@@ -25,4 +25,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - bower_components
+  - node_modules
 repository: WagonOfDoubt/Dollchan-Extension-Tools
