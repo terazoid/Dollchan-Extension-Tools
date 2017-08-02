@@ -1,12 +1,4 @@
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">{% assign text = site.data.strings.noDollchanDetectedTitle %}{% include locale.html %}</h5>
-      </div>
-      <div class="modal-body">
-        <p>{% assign text = site.data.strings.noDollchanDetectedMessage %}{% include locale.html %}</p>
-      </div>
-    </div>
-  </div>
+<div class="alert alert-warning collapse" role="alert" id="myModal">
+  <h5>{% assign text = site.data.strings.noDollchanDetectedTitle %}{% include locale.html %}</h5>
+  <p>{% assign text = site.data.strings.noDollchanDetectedMessage %}{% include locale.html %}</p>
 </div>

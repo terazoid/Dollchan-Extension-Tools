@@ -1,13 +1,36 @@
----
-layout: sidebar
----
+<!DOCTYPE html>
+<html>
 
-{% include save-modal.html %}
+  {% include head.html %}
 
-{% include error-modal.html %}
+  <body data-spy="scroll" data-target="#sidebar" data-offset="44">
 
-{{ content }}
+    {% include header.html %}
 
-{% include feature-list.html %}
+    <div class="container">
+      <div class="row">
+        <main class="page-content col-md-9">
+          {% include save-modal.html %}
 
-{% include board-preview.html %}
+          {% include error-modal.html %}
+  
+          {{ content }}
+
+          {% include feature-list.html %}
+
+          {% include board-preview.html %}
+        </main>
+        <aside class="col-md-3 hidden-sm-down">
+          {% include sidebar.html %}
+        </aside>
+      </div>
+    </div>
+
+    {% include de-svg-icons.html %}
+
+    {% include footer.html %}
+
+    <script src="{{ site.baseurl }}/js/tricks.js"></script>
+  </body>
+
+</html>

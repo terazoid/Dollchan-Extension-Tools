@@ -2,13 +2,11 @@
 
 $(() => {
   // if no Dollchan detected
-  if (!$('#de-main').length) {
-    $('#myModal').modal({
-      backdrop: 'static',
-      keyboard: false
-    });
-    return;
-  }
+  setTimeout(() => {
+    if (!$('#de-main').length) {
+      $('#myModal').removeClass('collapse');
+    }
+  }, 0);
 
   // storage
   const getStorage = (key) => JSON.parse(window.localStorage.getItem(key) || '{}');
