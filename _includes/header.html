@@ -8,14 +8,16 @@
     </span>
     <div class="mr-auto"></div>
     <div class="btn-group">
-      <a href="./en" class="btn btn-secondary{% if page.language == 'en' %} active{% endif %}">En</a>
-      <a href="./ru" class="btn btn-secondary{% if page.language == 'ru' %} active{% endif %}">Ru</a>
+      <a href="{{ page.translations.en | default: '' | prepend: site.baseurl }}" class="btn btn-secondary{% if page.language == 'en' %} active{% endif %}">En</a>
+      <a href="{{ page.translations.ru | default: '' | prepend: site.baseurl }}" class="btn btn-secondary{% if page.language == 'ru' %} active{% endif %}">Ru</a>
     </div>
+    {% if page.layout == "css-tricks" %}
     <div class="mr-5"></div>
     <div class="btn-group">
       <button type="button" class="btn btn-secondary" disabled>{% assign text = site.data.strings.load %}{% include locale.html %}</button>
       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">{% assign text = site.data.strings.save %}{% include locale.html %}</button>
     </div>
+    {% endif %}
   </nav>
   <a id="github" href="https://github.com/{{ site.repository }}" class="hidden-sm-down">
     <span>Fork me on GitHub!</span>

@@ -1,13 +1,16 @@
 ---
-layout: home
+layout: css-tricks
 language: suomi
+translations:
+  ru: /ru/css-tricks
+  en: /en/css-tricks
 board:
   pagePrefix: Pagi
   pages:
     - threads:
       - id: 123456
         image:
-          src: "./img/spurdo.jpg"
+          src: "/img/spurdo.jpg"
           size: "76837 B, 499x497"
           filename: "1496693784142.jpg"
         date: 17/06/05(Mon)23:16
@@ -39,7 +42,7 @@ board:
     - threads:
       - id: 321465
         image:
-          src: "./img/spurdo.jpg"
+          src: "/img/spurdo.jpg"
           size: "76837 B, 499x497"
           filename: "124145213123.jpg"
         date: 17/06/03(Mon)21:16

@@ -1,7 +1,11 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
 
-<script>
-  window.location.href = './' + (navigator.languages.includes('ru') ? 'ru' : 'en');
-</script>
+  {% include head.html %}
+
+  <body>
+    <script>
+      window.location.href = './' + (navigator.languages.includes('ru') ? 'ru' : 'en');
+    </script>
+  </body>
+</html>

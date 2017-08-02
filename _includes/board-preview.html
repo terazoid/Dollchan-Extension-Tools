@@ -7,7 +7,7 @@
           {% for thread in boardpage.threads %}
             <span class="filesize">File: <a href="#">{{ thread.image.filename }}</a> -(<em>{{ thread.image.size }}</em>)</span> <span class="thumbnailmsg">Thumbnail displayed, click image for full size.</span>
             <br>
-            <a href="#"><img src="{{ thread.image.src }}" width="200" height="200" class="thumb"></a>
+            <a href="#"><img src="{{ thread.image.src | prepend: site.baseurl }}" width="200" height="200" class="thumb"></a>
             <a name="{{ thread.id }}"></a>
             <label>
               <input type="checkbox" name="delete" value="{{ thread.id }}">

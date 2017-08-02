@@ -3,7 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/icon-16.png" sizes="16x16">
+  <link rel="icon" href="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/icon-32.png" sizes="32x32">
+  <link rel="icon" href="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/icon-64.png" sizes="64x64">
+  <link rel="icon" href="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/icon-128.png" sizes="128x128">
+  <link rel="icon" href="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/icon-256.png" sizes="256x256">
+
+  <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
