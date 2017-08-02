@@ -24,7 +24,8 @@ kramdown:
   toc_levels: 2..3
   transliterated_header_ids: true
   parse_block_html: true
-gems: [bootstrap]
+gems:
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
