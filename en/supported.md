@@ -6,14 +6,14 @@ translations:
 title: Supported image boards 
 ---
 
-##Supported image boards
+## Supported image boards
 
 The script works on [Wakaba](http://wakaba.c3.cx/s/web/wakaba_kareha.html) and [Kusaba](http://kusabax.cultnet.net/) based image boards, as well as some other engines that generate similar HTML code that the script can parse, such as [Tinyboard](http://tinyboard.org/). On some unsupported boards the script will block itself or misbehave.
 
-###List of non-Russian boards (last updated 2016.08.19)
+### List of non-Russian boards (last updated 2016.08.19)
 
-<table>
-<tbody>
+<table class="table table-bordered table-striped">
+<thead>
 <tr>
   <th>Works?</th>
   <th>Address</th>
@@ -21,6 +21,8 @@ The script works on [Wakaba](http://wakaba.c3.cx/s/web/wakaba_kareha.html) and [
   <th>Notes</th>
   <th>Engine</th>
 </tr>
+</thead>
+<tbody>
 <tr>
   <td><img src="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/ok.gif"></td>
   <td><a href="http://boards.4chan.org/b/" target="_blank">4chan.org</a></td>
@@ -89,11 +91,11 @@ The script works on [Wakaba](http://wakaba.c3.cx/s/web/wakaba_kareha.html) and [
 
 
 
-###List of Russian boards (last updated 2016.06.07)
+### List of Russian boards (last updated 2016.06.07)
 
 
-<table>
-<tbody>
+<table class="table table-bordered table-striped">
+<thead>
 <tr>
   <th>Works?</th>
   <th>Address</th>
@@ -101,7 +103,9 @@ The script works on [Wakaba](http://wakaba.c3.cx/s/web/wakaba_kareha.html) and [
   <th>Notes</th>
   <th>Engine</th>
   <th>Captcha</th>
-</tr>
+</tr>  
+</thead>
+<tbody>
 <tr>
   <td><img src="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/ok.gif"></td>
   <td><a href="http://2ch.hk/b/" target="_blank">2ch.hk</a></td>

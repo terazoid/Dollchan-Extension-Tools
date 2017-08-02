@@ -28,15 +28,16 @@ All spells can have the following syntax variations:
 * `#spell[board,](argument)` &mdash; a spell works only on a certain board but not in a thread. In threads on this board and on other boards, it would always return `false`.
 * `#spell[board,thread](argument)` &mdash; a spell works in a certain thread on a certain board. Outside of this thread, it would always return `false`.
 
-<center><table><tbody>
-  <tr>
-      <td>
-      </td>
-      <td>/b/ board</td>
-      <td>/b/32767 thread</td>
-      <td>/c/ board</td>
-      <td>/c/4095 thread</td>
-  </tr>
+<center><table class="table table-bordered table-striped">
+  <thead>
+      <th>
+      </th>
+      <th>/b/ board</th>
+      <th>/b/32767 thread</th>
+      <th>/c/ board</th>
+      <th>/c/4095 thread</th>
+  </thead>
+  <tbody>
   <tr>
       <td>#spell(argument)</td>
       <td>true/false</td>

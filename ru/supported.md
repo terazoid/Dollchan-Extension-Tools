@@ -10,10 +10,10 @@ title: Поддерживаемые имиджборды
 
 Скрипт работает на имиджбордах с движками [Wakaba](http://lurkmore.to/Wakaba), [Kusaba](http://kusabax.cultnet.net/), [Tinyboard](http://tinyboard.org/), [Vichan](https://github.com/vichan-devel/vichan), [TinyIB](https://github.com/tslocum/TinyIB), и прочими движками, генерирующими схожий html код, распознаваемый парсером скрипта, без критических изменений и модификаций со стороны администрации. В остальных случаях скрипт будет самостоятельно блокироваться, либо будет работать некорректно.
 
-Состояние работы скрипта для отечественных имиджбордов на **2017.05.10**:
+### Состояние работы скрипта для отечественных имиджбордов на **2017.05.10**:
 
-<table>
-<tbody>
+<table class="table table-bordered table-striped">
+<thead>
 <tr>
   <th>ОК</th>
   <th>Адрес</th>
@@ -22,7 +22,9 @@ title: Поддерживаемые имиджборды
   <th>Движок</th>
   <th>Капча</th>
   <th>Костыли</th>
-</tr>
+</tr>  
+</thead>
+<tbody>
 <tr>
   <td><img src="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/ok.gif"></td>
   <td><a href="http://2ch.hk/b/" target="_blank">2ch.hk</a></td>
@@ -404,17 +406,19 @@ title: Поддерживаемые имиджборды
 </tbody>
 </table>
 
-Список специально поддерживаемых зарубежных имиджбордов:
+### Список специально поддерживаемых зарубежных имиджбордов:
 
-<table>
-<tbody>
+<table class="table table-bordered table-striped">
+<thead>
 <tr>
   <th>OK</th>
   <th>Адрес</th>
   <th>Постов в /b</th>
   <th>Особенности</th>
   <th>Движок</th>
-</tr>
+</tr>  
+</thead>
+<tbody>
 <tr>
   <td><img src="https://raw.githubusercontent.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Images/ok.gif"></td>
   <td><a href="http://boards.4chan.org/b/" target="_blank">4chan.org</a></td>
