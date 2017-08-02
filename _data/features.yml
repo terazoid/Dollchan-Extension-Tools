@@ -195,7 +195,7 @@
     - id: hide-ref-my
       style: ".de-ref-my::after { content: none; } .de-ref-del.de-ref-my::after { content: ' (Del)'; } .de-ref-op.de-ref-my::after { content: ' (OP)'; }"
       ru: Убрать пометку (You) у <a href="#" class="de-link-pref de-ref-my">&gt;&gt;ссылок</a> на ваши посты
-      en: Remove the (You) tag from <a href="#" class="de-link-pref de-ref-my">&gt;&gt;links</a> to my posts?
+      en: Remove the (You) tag from <a href="#" class="de-link-pref de-ref-my">&gt;&gt;links</a> to my posts
     - id: link-parent-no-border
       style: ".de-link-parent { outline: none !important; }"
       ru: Убрать рамку вокруг <a href="#" class="de-link-pref de-link-parent">&gt;&gt;ссылок</a> при наведении
@@ -220,7 +220,7 @@
     - id: hide-post-note
       style: ".de-post-note { display: none; }"
       ru: "Убрать причины скрытия постов autohide #blabla(...)"
-      en: "Remove the post filtering reason? autohide #blahblah(...)"
+      en: "Remove the post filtering reason autohide #blahblah(...)"
     - id: hide-btn-arrows
       style: ".de-thread-buttons::before { content: none; }"
       ru: Убрать &gt;&gt; перед кнопкой "&gt;&gt; [Получить новые посты]"
