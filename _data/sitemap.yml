@@ -1,7 +1,7 @@
 # url must be without /en/ or /ru/ lang. direcory
 links:
   main:
-    - url: /
+    - url: ./
       en: Home
       ru: Главная
     - url: installation
