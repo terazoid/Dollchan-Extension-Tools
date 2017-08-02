@@ -1,8 +1,8 @@
-<ul class="list-unstyled col-md-3 col-sm-6">
+<ul class="navbar-nav list-compact col-md-3 col-sm-6">
 {% for link in links %}
   {% if link[page.language] %}
-    <li>
-      <a href="{{ link.url }}">{{ link[page.language] }}</a>
+    <li class="nav-item">
+      <a class="nav-link p-0" href="{{ link.url }}">{{ link[page.language] }}</a>
     </li>
   {% endif %}
 {% endfor %}

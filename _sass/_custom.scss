@@ -1,5 +1,7 @@
 $nav-pills-border-radius: 0;
 $form-check-input-margin-y: .5rem;
+$navbar-padding-y: 2px;
+$navbar-padding-x: 4px;
 
 .form-check-label * {
   vertical-align: middle;
@@ -27,20 +29,29 @@ $form-check-input-margin-y: .5rem;
   }
 }
 
-#topnav {
-  position: fixed;
-  border-radius: 0;
-  padding: 2px;
-  color: #F5F5F5;
-  font: bold 14px/16px arial;
-  text-align: center;
-  cursor: default;
-  background-color: #777;
+header .navbar {
+  flex-direction: row;
+  background: linear-gradient(to bottom, #7b849b, #616b86 8%, #3a414f 52%, rgba(0,0,0,0) 52%), linear-gradient(to bottom, rgba(0,0,0,0) 48%, #121212 52%, #1f2740 100%);
 
-  svg {
+  .navbar-brand img {
     width: 25px;
     height: 25px;
+    vertical-align: sub;
   }
+
+  @media (min-width: 768px) {
+    .navbar-brand {
+      margin-left: 130px;
+    }
+  }
+}
+
+#navbarNav {
+  top: 44px;
+}
+
+#toggler {
+  display: block;
 }
 
 main {

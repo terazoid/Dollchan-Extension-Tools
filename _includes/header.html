@@ -1,24 +1,52 @@
 <header class="site-header" role="banner">
-  <nav class="nav fixed-top de-win-head" id="topnav">
-    <span class="navbar-brand container">
-      <svg class="de-panel-logo-svg" style="vertical-align: text-top;">
-        <use xlink:href="#de-symbol-panel-logo"></use>
-      </svg>
-      <span class="de-win-title">{{ site.title }}</span>
-    </span>
-    <div class="mr-auto"></div>
-    <div class="btn-group">
-      <a href="{{ page.translations.en | default: '' | prepend: site.baseurl }}" class="btn btn-secondary{% if page.language == 'en' %} active{% endif %}">En</a>
-      <a href="{{ page.translations.ru | default: '' | prepend: site.baseurl }}" class="btn btn-secondary{% if page.language == 'ru' %} active{% endif %}">Ru</a>
+  <nav class="navbar navbar-inverse navbar-toggleable-md fixed-top">
+    <div style="display: flex; flex-flow: row">
+      <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}"><img src="{{ '/img/de-icon.svg' | prepend: site.baseurl }}"> {{ site.title }}</a>
     </div>
-    {% if page.layout == "css-tricks" %}
-    <div class="mr-5"></div>
-    <div class="btn-group">
-      <button type="button" class="btn btn-secondary" disabled>{% assign text = site.data.strings.load %}{% include locale.html %}</button>
-      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">{% assign text = site.data.strings.save %}{% include locale.html %}</button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./installation">{{ site.data.sitemap.categories.install[page.language] }}</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./css-tricks">{{ site.data.sitemap.categories.customize[page.language] }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./spells">{{ site.data.sitemap.categories.learn[page.language] }}</a>
+        </li>
+      </ul>
     </div>
-    {% endif %}
+    <form class="form-inline ml-auto" style="display: flex; flex-flow: row">
+      <div class="btn-group btn-group-sm hidden-xs-down">
+        <a href="{{ page.translations.en | default: '' | prepend: site.baseurl }}" class="btn {% if page.language == 'en' %}btn-primary active disabled{% else %}btn-secondary{% endif %}">:gb:</a>
+        <a href="{{ page.translations.ru | default: '' | prepend: site.baseurl }}" class="btn {% if page.language == 'ru' %}btn-primary active disabled{% else %}btn-secondary{% endif %}">:ru:</a>
+      </div>
+      {% if page.layout == "css-tricks" %}
+        <div class="mr-3"></div>
+        <div class="btn-group">
+          <!-- <button type="button" class="btn btn-secondary" disabled>{% assign text = site.data.strings.load %}{% include locale.html %}</button> -->
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#saveModal">{% assign text = site.data.strings.save %}{% include locale.html %}</button>
+        </div>
+      {% endif %}
+      <a class="navbar-toggler ml-3" data-toggle="collapse" data-target="#navbarNav" id="toggler">
+        <span class="navbar-toggler-icon"></span>
+      </a>
+    </form>
   </nav>
+  <div class="collapse bg-inverse fixed-top" id="navbarNav">
+    <div class="container">
+      <nav class="row navbar-inverse">
+        {% assign links = site.data.sitemap.links.main %}
+        {% include footer-links.html %}
+        {% assign links = site.data.sitemap.links.customize %}
+        {% include footer-links.html %}
+        {% assign links = site.data.sitemap.links.develop %}
+        {% include footer-links.html %}
+        {% assign links = site.data.sitemap.links.info %}
+        {% include footer-links.html %}
+      </nav>
+    </div>
+  </div>
   <a id="github" href="https://github.com/{{ site.repository }}" class="hidden-sm-down">
     <span>Fork me on GitHub!</span>
     <span>...desu!</span>

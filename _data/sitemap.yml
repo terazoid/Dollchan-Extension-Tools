@@ -10,9 +10,7 @@ links:
   customize:
     - url: spells
       en: Spells guide
-      ru: Руководство по спеллам (новый формат)
-    - url: spells-old
-      ru: Руководство по спеллам (старый формат)
+      ru: Руководство по спеллам
     - url: settings-time
       en: Time correction guide
       ru: Руководство по корректировке времени
@@ -35,3 +33,13 @@ links:
       ru: Поддерживаемые имиджборды
     - url: versions
       ru: Версии и изменения
+categories:
+  install:
+    ru: Установить
+    en: Install
+  customize:
+    ru: Настройка
+    en: Customize
+  learn:
+    ru: Руководство
+    en: Learn
