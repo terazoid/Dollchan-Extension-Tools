@@ -4,11 +4,25 @@ language: ru
 title: Версии и изменения
 ---
 
-[Разрабатываемая версия](https://raw.github.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Dollchan_Extension_Tools.user.js)  &mdash; доступна для всех браузеров.
+[Разрабатываемая ES5 версия](https://raw.github.com/SthephanShinkufag/Dollchan-Extension-Tools/master/Dollchan_Extension_Tools.user.js)  &mdash; доступна для всех браузеров.
 
-[Разрабатываемая ES6 версия](https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/raw/master/src/Dollchan_Extension_Tools.es6.user.js) &mdash; для Firefox 45+, Chrome 51+.
+[Разрабатываемая ESNext версия](https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/raw/master/src/Dollchan_Extension_Tools.es6.user.js) &mdash; для Firefox 54+, Chrome 59+.
 
 >
+* Добавлена опция: `"Картинки"` > `"Имя файла под раскрытой картинкой"`.
+* `brchan.org`: исправлена отправка постов.
+* Линк с именем файла и оригинальной ссылкой теперь отображается и под развёрнутыми webm/mp4. Если включена опция `"Картинки"` > `"Получать названия WebM из метаданных"`, там же будет отображаться полученное название. [Пример](https://user-images.githubusercontent.com/1059874/31963235-b2bbaf28-b908-11e7-83fb-725fa5733344.gif).
+
+[2017.10.24](https://github.com/SthephanShinkufag/Dollchan-Extension-Tools/raw/31bbc1d59bbb276a9c10c00abe4d16199116da57/Dollchan_Extension_Tools.user.js)
+
+>
+* Под развернутой картинкой теперь отображается линк с именем файла и оригинальной ссылкой (полезно при включенной предзагрузке).
+* `iichan.hk`: убран встроенный счётчик постов.
+* `Dollchan API`: новое событие [filechange](dollchan-api#4-filechange--%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2-%D0%BF%D1%80%D0%B8%D0%BA%D1%80%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%BA-%D1%84%D0%BE%D1%80%D0%BC%D0%B5-%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B8). Срабатывает, когда пользователь прикрепляет файл к форме создания поста или треда, либо очищает его, либо прикрепляет другой файл.
+* Поддержка Greasemonkey 4.0 и асинхронного хранилища GM.getValue/GM.setValue
+* Исправлена работа коррекции времени.
+* Кнопки разметки перерисованы в svg.
+* Скрипт переведён на украинский язык. Выберите `[ua]` в окне настроек.
 * New: кнопка `"Очистить форму"` в заголовке окна формы ответа, рядом с кнопками `"Поместить форму под пост"` и `"Закрыть форму"`.
 * Возвращены назад опции `"Растягивать посты по ширине экрана"`, `"Автоматически закрывать уведомления"`, `"Оповещать при наличии трип-кода в поле 'Тема'"`.
 * Исправлено раскрытие картинок на некоторых бордах и в старых версиях Firefox.

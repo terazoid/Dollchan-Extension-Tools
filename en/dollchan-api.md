@@ -148,3 +148,26 @@ Object { success: true, num: null }
 Object { success: false, error: "Error: Wrong CAPTCHA." }
 Object { success: false, error: "Error: You must type a message or attach a file." }
 ```
+
+### 4. `filechange` &mdash; file(s) added\removed to the post form
+
+This API triggers when the user adds, removes or replaces one or more of the files in the list of attachments in the post form. The API will return a `data` field with an array of all `File` objects. In example: 
+
+```js
+  const result = data.data;
+  switch(data.name) {
+  case 'filechange':
+    console.log('Files changed:', result);
+    /* your code here */
+    break;
+```
+Possible results:
+
+```
+Files changed: Array [ File ]
+Files changed: Array [ File, File ]
+Files changed: Array [ File, File, File ]
+Files changed: Array [ File, <1 empty element>, File ]
+```
+
+In the above example the user added three files one by one, then removed the second one.

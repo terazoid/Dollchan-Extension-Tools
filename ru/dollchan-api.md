@@ -157,3 +157,26 @@ Object { success: true, num: null }
 Object { success: false, error: "Ошибка: Капча невалидна." }
 Object { success: false, error: "Ошибка: Пустое поле сообщения." }
 ```
+
+### 4. `filechange` &mdash; добавление/изменение файлов, прикрепленных к форме отправки
+
+Событие отслеживает момент, когда пользователь прикрепляет файл к форме создания поста или треда, либо очищает его, либо прикрепляет другой файл. API возвратит поле `data` с массивом всех объектов `File`. Пример:
+
+```js
+  const result = data.data;
+  switch(data.name) {
+  case 'filechange':
+    console.log('Files changed:', result);
+    /* ваш код */
+    break;
+```
+Варианты результатов:
+
+```
+Files changed: Array [ File ]
+Files changed: Array [ File, File ]
+Files changed: Array [ File, File, File ]
+Files changed: Array [ File, <1 пустой элемент>, File ]
+```
+
+В данном случае к форме было добавлено три файла, потом удалён второй по счёту.
