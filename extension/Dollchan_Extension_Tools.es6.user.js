@@ -30,7 +30,7 @@
 'use strict';
 
 const version = '19.8.28.0';
-const commit = '308148b';
+const commit = '2af1b91';
 
 /* ==[ DefaultCfg.js ]========================================================================================
                                                 DEFAULT CONFIG
@@ -16439,6 +16439,7 @@ function getImageBoard(checkDomains, checkEngines) {
 		}
 	}
 	ibDomains['2ch.hk'] = Makaba;
+	ibDomains['2ch.refchan.org'] = Makaba;
 	ibDomains['2ch.pm'] = Makaba;
 	ibDomains['2ch.re'] = Makaba;
 	ibDomains['2ch.tf'] = Makaba;

@@ -973,6 +973,7 @@ function getImageBoard(checkDomains, checkEngines) {
 		}
 	}
 	ibDomains['2ch.hk'] = Makaba;
+	ibDomains['2ch.refchan.org'] = Makaba;
 	ibDomains['2ch.pm'] = Makaba;
 	ibDomains['2ch.re'] = Makaba;
 	ibDomains['2ch.tf'] = Makaba;
